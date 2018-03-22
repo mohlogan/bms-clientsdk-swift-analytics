@@ -373,6 +373,7 @@
 			children = (
 				9221C0DB1C4EE159007FA9D0 /* Error.swift */,
 				9276B4651C6A621F00E61F45 /* Constants.swift */,
+				D0E2978E2063925100690C09 /* Feedback */,
 				9221C0061C4ED26F007FA9D0 /* Analytics */,
 				9221C0071C4ED26F007FA9D0 /* Logger */,
 				9221C0081C4ED26F007FA9D0 /* Resources */,
@@ -387,11 +388,6 @@
 				9221C0441C4ED9AF007FA9D0 /* BMSAnalytics+iOS.swift */,
 				9221C0451C4ED9AF007FA9D0 /* BMSAnalytics+watchOS.swift */,
 				92B9DF6A1DF9FCC800BD3605 /* LocationDelegate.swift */,
-				D0898F0220628B42007DEC72 /* Feedback.storyboard */,
-				D066DE7F20629A3F00F1EFEC /* Assets.xcassets */,
-				D066DE8A20629B1200F1EFEC /* Feedback.swift */,
-				D0C50EE42062C55E00C2175D /* UIImageControllerViewController.swift */,
-				D0C50EEF2062C5A000C2175D /* ComposeEditorViewController.swift */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -776,6 +772,18 @@
 				7F69878ACE7FA94ADFB641A1 /* Pods-BMSAnalytics Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0E2978E2063925100690C09 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				D066DE8A20629B1200F1EFEC /* Feedback.swift */,
+				D0C50EE42062C55E00C2175D /* UIImageControllerViewController.swift */,
+				D0C50EEF2062C5A000C2175D /* ComposeEditorViewController.swift */,
+				D0898F0220628B42007DEC72 /* Feedback.storyboard */,
+				D066DE7F20629A3F00F1EFEC /* Assets.xcassets */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
