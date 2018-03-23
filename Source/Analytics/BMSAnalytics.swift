@@ -140,6 +140,8 @@ public class BMSAnalytics: AnalyticsDelegate {
     // The unique ID used to send logs to the Mobile Analytics service.
     public fileprivate(set) static var apiKey: String?
     
+    internal static var actualUserIdentity:String?
+    
     // Identifies the current application user.
     // To reset the userId, set the value to nil.
     public var userIdentity: String? {
@@ -315,7 +317,9 @@ public class BMSAnalytics: AnalyticsDelegate {
         return requestMetadataString
     }
     
-    
+    internal static func setUserIdentity(_ userId: String) -> Void {
+        actualUserIdentity = userId
+    }
 
     // MARK: - Helpers
     

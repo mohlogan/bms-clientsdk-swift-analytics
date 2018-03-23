@@ -27,7 +27,7 @@ class ComposeEditorViewController: UIViewController {
     
     @IBAction func messagePopupOK(_ sender: Any) {
         
-        
+        Feedback.messages.append(messageBox.text)
         
         //ViewController.messages.append(messageBox.text)
         

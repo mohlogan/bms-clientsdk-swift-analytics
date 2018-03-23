@@ -193,14 +193,16 @@ class UIImageControllerViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
         
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
-        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, UIScreen.main.scale)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
         Feedback.screenshot = UIGraphicsGetImageFromCurrentImageContext()
         
         UIGraphicsEndImageContext()
-        UIImageWriteToSavedPhotosAlbum(Feedback.screenshot!, nil, nil, nil)
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "feedbackImageView") as! UIViewController
-        self.present(vc, animated: true, completion: nil)
+        Feedback.saveImage(Feedback.screenshot!)
+        
+        //UIImageWriteToSavedPhotosAlbum(Feedback.screenshot!, nil, nil, nil)
+        //let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        //let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "feedbackImageView") as! UIViewController
+        //self.present(vc, animated: true, completion: nil)
     }
 }
