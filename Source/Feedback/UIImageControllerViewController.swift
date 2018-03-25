@@ -1,3 +1,21 @@
+/*
+ *     Copyright 2016 IBM Corp.
+ *     Licensed under the Apache License, Version 2.0 (the "License");
+ *     you may not use this file except in compliance with the License.
+ *     You may obtain a copy of the License at
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *     Unless required by applicable law or agreed to in writing, software
+ *     distributed under the License is distributed on an "AS IS" BASIS,
+ *     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *     See the License for the specific language governing permissions and
+ *     limitations under the License.
+ */
+
+
+
+// MARK: - Swift 3
+
+#if swift(>=3.0)
 
 import UIKit
 
@@ -111,10 +129,10 @@ class UIImageControllerViewController: UIViewController {
             
         }
         if (!UIImageControllerViewController.touchEnabled && UIImageControllerViewController.isComposeBtnPressed) {
-            let image: UIImage = UIImage(named: "ios-checkmark")!
-            let bgImage = UIImageView(image: image)
-            bgImage.frame = CGRect(x: startpoint.x, y: startpoint.y, width: 20, height: 20)
-            self.view.addSubview(bgImage) //check the image name
+            //let image: UIImage = UIImage(named: "ios-checkmark")!
+            //let bgImage = UIImageView(image: image)
+            //bgImage.frame = CGRect(x: startpoint.x, y: startpoint.y, width: 20, height: 20)
+            //self.view.addSubview(bgImage) //check the image name
             performSegue(withIdentifier: "segueModal", sender: self)
             //  composeBtn.tintColor = UIColor.black
         }
@@ -196,9 +214,9 @@ class UIImageControllerViewController: UIViewController {
         UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, UIScreen.main.scale)
         imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
         Feedback.screenshot = UIGraphicsGetImageFromCurrentImageContext()
-        
         UIGraphicsEndImageContext()
-        Feedback.saveImage(Feedback.screenshot!)
+        
+        Feedback.send(fromSentButton: true)
         
         //UIImageWriteToSavedPhotosAlbum(Feedback.screenshot!, nil, nil, nil)
         //let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -206,3 +224,5 @@ class UIImageControllerViewController: UIViewController {
         //self.present(vc, animated: true, completion: nil)
     }
 }
+
+#endif

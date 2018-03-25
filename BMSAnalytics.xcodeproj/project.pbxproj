@@ -1170,11 +1170,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BMSAnalytics Tests/Pods-BMSAnalytics Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI-iOS/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore-iOS/BMSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive-iOS/SSZipArchive.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1208,11 +1210,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestApp iOS/Pods-TestApp iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI-iOS/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore-iOS/BMSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive-iOS/SSZipArchive.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1327,11 +1331,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestApp watchOS Extension/Pods-TestApp watchOS Extension-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI-watchOS/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore-watchOS/BMSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive-watchOS/SSZipArchive.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

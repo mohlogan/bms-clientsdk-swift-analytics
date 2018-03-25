@@ -192,90 +192,6 @@ public extension Logger {
             }
         })
     }
-
-    // Same as the other send() method but for analytics
-    internal static func sendFeedback(completionHandler userCallback: BMSCompletionHandler? = nil, uploadFileName:String) {
-        
-        guard !currentlySendingFeedbackdata else {
-            
-            Analytics.logger.info(message: "Ignoring Analytics.sendFeedback() until the previous send request finishes.")
-            
-            return
-        }
-        
-        currentlySendingFeedbackdata = true
-        
-        // Internal completion handler - wraps around the user supplied completion handler (if supplied)
-        let feedbackSendCallback: BMSCompletionHandler = { (response: Response?, error: Error?) in
-            
-            currentlySendingAnalyticsLogs = false
-            
-            if error == nil && response?.statusCode == 201 {
-                
-                Analytics.logger.debug(message: "Feedback data successfully sent to the server.")
-                
-                //TODO: Delete file send // BMSLogger.delete(file: Constants.File.Analytics.outboundLogs)
-            }
-            else {
-                
-                var debugMessage = ""
-                if let response = response {
-                    if let statusCode = response.statusCode {
-                        debugMessage += "Status code: \(statusCode). "
-                    }
-                    if let responseText = response.responseText {
-                        debugMessage += "Response: \(responseText). "
-                    }
-                }
-                if let error = error {
-                    debugMessage += " Error: \(error)."
-                }
-                
-                BMSLogger.internalLogger.error(message: "Request to send Feedback data has failed. To see more details, set Logger.sdkDebugLoggingEnabled to true, or send Feedback with a completion handler to retrieve the response and error. Reason: \(debugMessage)")
-                BMSLogger.internalLogger.debug(message: debugMessage)
-            }
-            
-            userCallback?(response, error)
-        }
-        
-        
-        // Use a serial queue to ensure that the same logs do not get sent more than once
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async(execute: {
-            do {
-                let uploadFile = BMSLogger.feedbackDocumentPath + uploadFileName
-                if BMSLogger.fileManager.fileExists(atPath: uploadFile){
-
-                    let boundary = "Boundary-\(UUID().uuidString)"
-                    let mimeType = "application/zip"
-                    let fieldName = "uploadFile"
-
-                    let fileurl = URL(fileURLWithPath: uploadFile)
-                    let fileData = try Data(contentsOf: fileurl)
-                    
-                    // Set data
-                    let body = NSMutableData()
-                    body.appendString("--\(boundary)\r\n")
-                    body.appendString("Content-Disposition: form-data; name=\"\(fieldName)\"; filename=\"\(uploadFileName)\"\r\n")
-                    body.appendString("Content-Type: \(mimeType)\r\n\r\n")
-                    body.append(fileData)
-                    body.appendString("\r\n")
-                    body.appendString("--\(boundary)--\r\n")
-
-                    if let request: BaseRequest = try BMSLogger.buildLogSendRequestForFeedback(completionHandler:feedbackSendCallback, boundary:boundary) {
-                        request.send(requestBody: body as Data, completionHandler: feedbackSendCallback)
-                    }
-                }
-                else {
-                    feedbackSendCallback(nil, BMSAnalyticsError.noLogsToSend)
-                }
-                
-                
-            }
-            catch let error as NSError {
-                feedbackSendCallback(nil, error)
-            }
-        })
-    }
 }
 
 
@@ -649,12 +565,12 @@ public class BMSLogger: LoggerDelegate {
     }
     
     // Build the Request object that will be used to send the logs to the server
-    internal static func buildLogSendRequestForFeedback(completionHandler callback: BMSCompletionHandler, boundary: String) throws -> BaseRequest? {
+    internal static func buildLogSendRequestForFeedback(completionHandler callback: BMSCompletionHandler) throws -> BaseRequest? {
         
         var logUploadUrl = ""
         let bmsClient = BMSClient.sharedInstance
-        var headers: [String: String] = ["Content-Type": "multipart/form-data; boundary=\(boundary)"]
-        
+        var headers: [String: String] = ["Content-Type": "multipart/form-data"]
+
         // Check that the BMSClient class has been initialized before building the upload URL
         // Only the region is needed to communicate with the Analytics service. App route and GUID are not required.
         if bmsClient.bluemixRegion != nil && bmsClient.bluemixRegion != "" {

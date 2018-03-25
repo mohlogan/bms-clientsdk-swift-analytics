@@ -271,8 +271,6 @@ public class BMSAnalytics: AnalyticsDelegate {
         NotificationCenter.default.removeObserver(self)
     }
     
-    
-    
     // MARK: - Request analytics
     
     // Create a JSON string containing device/app data for the Analytics server to use
