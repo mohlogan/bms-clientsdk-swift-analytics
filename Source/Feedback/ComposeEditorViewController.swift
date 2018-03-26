@@ -20,9 +20,8 @@
 import UIKit
 
 class ComposeEditorViewController: UIViewController {
-    
+
     var messages:[String] = [String]()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,89 +32,17 @@ class ComposeEditorViewController: UIViewController {
         messageBox.textColor = UIColor.lightGray
     }
     
-    
     @IBOutlet weak var messageBox: UITextView!
     
     @IBAction func messagePopupOK(_ sender: Any) {
         
         Feedback.messages.append(messageBox.text)
         
-        //ViewController.messages.append(messageBox.text)
-        
-        //        createDir()
-        //
-        //        let docsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        //        let ourDir = docsDir.appendingPathComponent("ourCustomDir/")
-        //        let tempDir = ourDir.appendingPathComponent("temp/")
-        //        let unzippedDir = tempDir.appendingPathComponent("unzippedDir/")
-        //        let unzippedfileDir = unzippedDir.appendingPathComponent("unZipped.txt")
-        //        let zippedDir = tempDir.appendingPathComponent("Zipped.zip")
-        //        do {
-        //
-        //            try messages.write(to: unzippedfileDir, atomically: false, encoding: .utf8)
-        //
-        //
-        //            let x = SSZipArchive.createZipFile(atPath: zippedDir.path, withContentsOfDirectory: unzippedfileDir.path)
-        //
-        //            var zipData: NSData! = NSData()
-        //
-        //            do {
-        //                zipData = try NSData(contentsOfFile: unzippedfileDir.path, options: NSData.ReadingOptions.mappedIfSafe)
-        //                //once I get a readable .zip file, I will be using this zipData in a multipart webservice
-        //            }
-        //            catch let err as NSError {
-        //                print("err 1 here is :\(err.localizedDescription)")
-        //            }
-        //        }
-        //        catch let err as NSError {
-        //
-        //            print("err 3 here is :\(err.localizedDescription)")
-        //        }
-        
-        
-        
-        
-        //  let messageArray :String =
-        
-        //        let messageArray = messages
-        //
-        //        if let json = try? JSONSerialization.data(withJSONObject: messageArray, options: []) {
-        //            if let content = String(data: json, encoding: .utf8) {
-        //                print(content)
-        //            }
-        //        }
         dismiss(animated: false, completion: nil)
-        
-        
-        
     }
-    
-    //    func createDir(){
-    //        let docsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-    //        let ourDir = docsDir.appendingPathComponent("ourCustomDir/")
-    //        let tempDir = ourDir.appendingPathComponent("temp/")
-    //        let unzippedDir = tempDir.appendingPathComponent("unzippedDir/")
-    //        let fileManager = FileManager.default
-    //        if fileManager.fileExists(atPath: tempDir.path) {
-    //            deleteFile(path: tempDir)
-    //            deleteFile(path: unzippedDir)
-    //        } else {
-    //            print("file does not exist")
-    //            do {
-    //                try FileManager.default.createDirectory(atPath: tempDir.path, withIntermediateDirectories: true, attributes: nil)
-    //                try FileManager.default.createDirectory(atPath: unzippedDir.path, withIntermediateDirectories: true, attributes: nil)
-    //                print("creating dir \(tempDir)")
-    //            } catch let error as NSError {
-    //                print("here : " + error.localizedDescription)
-    //            }
-    //        }
-    //    }
-    
-    
 }
 
-extension UITextView :UITextViewDelegate
-{
+extension UITextView :UITextViewDelegate {
     
     /// Resize the placeholder when the UITextView bounds change
     override open var bounds: CGRect {

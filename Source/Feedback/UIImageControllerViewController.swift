@@ -16,7 +16,7 @@
 // MARK: - Swift 3
 
 #if swift(>=3.0)
-
+    
 import UIKit
 
 class UIImageControllerViewController: UIViewController {
@@ -28,8 +28,6 @@ class UIImageControllerViewController: UIViewController {
     static var isMarkerBtnPressed:Bool = false
     static var isComposeBtnPressed:Bool = false
     static var ext:UIImage?
-    
-    
     
     @IBOutlet weak var composeBtn: UIBarButtonItem!
     @IBOutlet weak var editBtn: UIBarButtonItem!
@@ -54,7 +52,6 @@ class UIImageControllerViewController: UIViewController {
         }
     }
     
-    
     @IBAction func markerButtonTapped(_ sender: UIBarButtonItem) {
         if markerBtn.tintColor == UIColor.black {
             UIImageControllerViewController.isMarkerBtnPressed = true
@@ -67,7 +64,6 @@ class UIImageControllerViewController: UIViewController {
         }
     }
     
-    
     @IBAction func composeButtonTapped(_ sender: Any) {
         if UIImageControllerViewController.isComposeBtnPressed {
             UIImageControllerViewController.isComposeBtnPressed = false
@@ -76,12 +72,11 @@ class UIImageControllerViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! ComposeEditorViewController
         vc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext //All objects and view are transparent
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.isUserInteractionEnabled = false
@@ -95,16 +90,12 @@ class UIImageControllerViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(normalTap(_:)))
         tapGesture.numberOfTapsRequired = 1
         imageView.addGestureRecognizer(tapGesture)
-        
-        
-        
     }
     
     @objc func normalTap(_ sender: UIGestureRecognizer){
         print("Normal tap")
         drawImageView(mainImage: #imageLiteral(resourceName: "edit-1"), withBadge:#imageLiteral(resourceName: "eraser") )
     }
-    
     
     func drawImageView(mainImage: UIImage, withBadge badge: UIImage) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(mainImage.size, false, 0.0)
@@ -183,11 +174,11 @@ class UIImageControllerViewController: UIViewController {
     
     /* To add an erase/undo button
      @IBAction func eraseButton(_ sender: UIBarButtonItem) {
-         path.removeAllPoints()
-         imageView.layer.sublayers = nil
-         imageView.setNeedsDisplay()
+     path.removeAllPoints()
+     imageView.layer.sublayers = nil
+     imageView.setNeedsDisplay()
      } */
-
+    
     @IBAction func closeButton(_ sender: Any) {
         
         let alert = UIAlertController(title: "Do you want to exit?", message: "", preferredStyle: UIAlertControllerStyle.alert)
@@ -211,11 +202,6 @@ class UIImageControllerViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         Feedback.send(fromSentButton: true)
-        
-        //UIImageWriteToSavedPhotosAlbum(Feedback.screenshot!, nil, nil, nil)
-        //let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        //let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "feedbackImageView") as! UIViewController
-        //self.present(vc, animated: true, completion: nil)
     }
 }
 
