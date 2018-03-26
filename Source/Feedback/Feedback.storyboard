@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="documents saved in the Xcode 7 format" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--feedbackImageView-->
@@ -14,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="21v-CE-8Xs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="43p-uA-DNv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="FeedBackimageView" translatesAutoresizingMaskIntoConstraints="NO" id="BUs-St-dML" userLabel="FeedBackimageView">
@@ -26,7 +30,7 @@
                                 </connections>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQS-dM-loo">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <rect key="frame" x="-1" y="622" width="373" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem image="edit copy-1" id="3iP-4s-bVh">
@@ -106,7 +110,7 @@
                         <viewControllerLayoutGuide type="bottom" id="3Hp-VE-aa7"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" id="Qh5-lP-Koa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFm-o3-FFF">

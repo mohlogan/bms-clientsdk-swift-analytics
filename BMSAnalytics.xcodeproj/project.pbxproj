@@ -150,6 +150,20 @@
 			remoteGlobalIDString = 13558E710417FA60A7569B23B18D98DF;
 			remoteInfo = "Pods-TestApp watchOS Extension";
 		};
+		D0075A9C2068CB800026E9CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9276B4C91C6D1D9E00E61F45 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 92F188B41A8BBF082723AA6C794E25F7;
+			remoteInfo = "SSZipArchive-iOS";
+		};
+		D0075A9E2068CB800026E9CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9276B4C91C6D1D9E00E61F45 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53F59FC76245B51067B6EBA9FDE52D60;
+			remoteInfo = "SSZipArchive-watchOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -650,6 +664,8 @@
 				92E7AACE1CB700E500FEC069 /* Pods_BMSAnalytics_watchOS.framework */,
 				92E7AAD01CB700E500FEC069 /* Pods_TestApp_iOS.framework */,
 				92E7AAD41CB700E500FEC069 /* Pods_TestApp_watchOS_Extension.framework */,
+				D0075A9D2068CB800026E9CB /* SSZipArchive.framework */,
+				D0075A9F2068CB800026E9CB /* SSZipArchive.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1054,6 +1070,20 @@
 			fileType = wrapper.framework;
 			path = Pods_TestApp_watchOS_Extension.framework;
 			remoteRef = 92E7AAD31CB700E500FEC069 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D0075A9D2068CB800026E9CB /* SSZipArchive.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SSZipArchive.framework;
+			remoteRef = D0075A9C2068CB800026E9CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D0075A9F2068CB800026E9CB /* SSZipArchive.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SSZipArchive.framework;
+			remoteRef = D0075A9E2068CB800026E9CB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

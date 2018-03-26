@@ -386,7 +386,7 @@ public class Feedback{
                 if summary.saved.contains(entry) == true {
                     //Remove from saved
                     for i in 0..<summary.saved.count {
-                        if summary.saved[i].elementsEqual(entry) {
+                        if summary.saved[i] == entry {
                             summary.saved.remove(at: i)
                             break
                         }
@@ -395,7 +395,7 @@ public class Feedback{
                     var updated:Bool = false
                     //Add to send
                     for i in 0..<summary.send.count {
-                        if summary.send[i].timeSent.elementsEqual(timesent) {
+                        if summary.send[i].timeSent == timesent {
                             summary.send[i].sendArray.append(entry)
                             updated = true
                             break
@@ -470,10 +470,10 @@ public class Feedback{
         let sessionId:String = BMSAnalytics.lifecycleEvents[Constants.Metadata.Analytics.sessionId] as! String
         let userID:String
             
-        if( BMSAnalytics.actualUserIdentity == nil ){
+        if( Analytics.userIdentity == nil ){
             userID = "UNKNOWN"
         } else {
-            userID = BMSAnalytics.actualUserIdentity!
+            userID = (Analytics.userIdentity)!
         }
         
         let jsonObject: [String: Any] = [
