@@ -52,7 +52,6 @@ class UIImageControllerViewController: UIViewController {
             editBtn.tintColor = UIColor.black
             UIImageControllerViewController.touchEnabled = false
         }
-        
     }
     
     
@@ -134,7 +133,7 @@ class UIImageControllerViewController: UIViewController {
             //bgImage.frame = CGRect(x: startpoint.x, y: startpoint.y, width: 20, height: 20)
             //self.view.addSubview(bgImage) //check the image name
             performSegue(withIdentifier: "segueModal", sender: self)
-            //  composeBtn.tintColor = UIColor.black
+            //composeBtn.tintColor = UIColor.black
         }
     }
     
@@ -158,10 +157,10 @@ class UIImageControllerViewController: UIViewController {
         let strokeLayer = CAShapeLayer()
         strokeLayer.fillColor = nil
         strokeLayer.lineWidth = 5
-        strokeLayer.strokeColor = UIColor.yellow.cgColor
+        strokeLayer.strokeColor = UIColor.orange.cgColor
         if UIImageControllerViewController.isMarkerBtnPressed {
             strokeLayer.lineWidth = 15
-            strokeLayer.strokeColor = UIColor.red.cgColor
+            strokeLayer.strokeColor = UIColor.gray.cgColor
         }
         strokeLayer.path = path.cgPath
         imageView.layer.addSublayer(strokeLayer)
@@ -184,22 +183,17 @@ class UIImageControllerViewController: UIViewController {
     
     /* To add an erase/undo button
      @IBAction func eraseButton(_ sender: UIBarButtonItem) {
-     
-     path.removeAllPoints()
-     imageView.layer.sublayers = nil
-     imageView.setNeedsDisplay()
-     
-     
+         path.removeAllPoints()
+         imageView.layer.sublayers = nil
+         imageView.setNeedsDisplay()
      } */
 
     @IBAction func closeButton(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Dismiss app Feedback?", message: "All data and comments made will be deleted, Do you want to continue?", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Do you want to exit?", message: "", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Yes, Dismiss", style: UIAlertActionStyle.default, handler: {action in self.dismiss(animated: false, completion: nil)}))
         alert.addAction(UIAlertAction(title: "No, Cancel", style: UIAlertActionStyle.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
-        
-        
     }
     
     @IBAction func doneButton(_ sender: UIBarButtonItem) {
