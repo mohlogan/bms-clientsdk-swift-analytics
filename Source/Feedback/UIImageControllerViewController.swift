@@ -28,6 +28,7 @@ class UIImageControllerViewController: UIViewController {
     static var isMarkerBtnPressed:Bool = false
     static var isComposeBtnPressed:Bool = false
     static var ext:UIImage?
+    static var counter:Int = 0;
     
     @IBOutlet weak var composeBtn: UIBarButtonItem!
     @IBOutlet weak var editBtn: UIBarButtonItem!
@@ -116,15 +117,41 @@ class UIImageControllerViewController: UIViewController {
         let touch = touches.first
         if let point = touch?.location(in: imageView){
             startpoint = point
-            
         }
         if (!UIImageControllerViewController.touchEnabled && UIImageControllerViewController.isComposeBtnPressed) {
-            //let image: UIImage = UIImage(named: "ios-checkmark")!
-            //let bgImage = UIImageView(image: image)
-            //bgImage.frame = CGRect(x: startpoint.x, y: startpoint.y, width: 20, height: 20)
-            //self.view.addSubview(bgImage) //check the image name
+
+            let touch = touches.first
+            if let point = touch?.location(in: imageView){
+                touchpoint = point
+            }
+            path.move(to: startpoint)
+
+            //Draw Circle
+            path =  UIBezierPath(arcCenter: CGPoint(x: touchpoint.x,y: touchpoint.y), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+            let strokeLayer = CAShapeLayer()
+            strokeLayer.fillColor = UIColor.orange.cgColor
+            strokeLayer.path = path.cgPath
+            strokeLayer.strokeColor = UIColor.orange.cgColor
+            imageView.layer.addSublayer(strokeLayer)
+            imageView.setNeedsDisplay()
+
+            //Draw Text
+            let textLayer = CATextLayer()
+            textLayer.frame = CGRect(x: touchpoint.x-5,y: touchpoint.y-10, width: 20, height: 20)
+            textLayer.font = UIFont(name: "Helvetica-Bold", size: 18)
+            textLayer.fontSize = 18;
+            textLayer.foregroundColor = UIColor.black.cgColor
+            textLayer.backgroundColor = UIColor.orange.cgColor
+            textLayer.alignmentMode = kCAAlignmentCenter;
+            UIImageControllerViewController.counter = UIImageControllerViewController.counter+1
+            textLayer.string = String(UIImageControllerViewController.counter);
+
+            imageView.layer.addSublayer(textLayer)
+            imageView.setNeedsDisplay()
+            path = UIBezierPath()
+
+            startpoint = touchpoint
             performSegue(withIdentifier: "segueModal", sender: self)
-            //composeBtn.tintColor = UIColor.black
         }
     }
     
@@ -133,7 +160,6 @@ class UIImageControllerViewController: UIViewController {
             let touch = touches.first
             if let point = touch?.location(in: imageView){
                 touchpoint = point
-                
             }
             path.move(to: startpoint)
             path.addLine(to: touchpoint)
@@ -188,6 +214,11 @@ class UIImageControllerViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: UIBarButtonItem) {
+        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, UIScreen.main.scale)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        Feedback.screenshot = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        Feedback.send(fromSentButton: true)
         
         // alert creation
         let alert = UIAlertController(title: "App feedback sent", message: "Thanks for the feedback, you make our app better!", preferredStyle: UIAlertControllerStyle.alert)
@@ -196,12 +227,6 @@ class UIImageControllerViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
         
-        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, UIScreen.main.scale)
-        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        Feedback.screenshot = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        Feedback.send(fromSentButton: true)
     }
 }
 
