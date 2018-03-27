@@ -82,6 +82,7 @@ class UIImageControllerViewController: UIViewController {
         super.viewDidLoad()
         imageView.isUserInteractionEnabled = false
         UIImageControllerViewController.touchEnabled = false
+        UIImageControllerViewController.counter=0
         // Do any additional setup after loading the view.
         imageView.clipsToBounds = true
         imageView.isMultipleTouchEnabled = false
@@ -118,40 +119,9 @@ class UIImageControllerViewController: UIViewController {
         if let point = touch?.location(in: imageView){
             startpoint = point
         }
+
         if (!UIImageControllerViewController.touchEnabled && UIImageControllerViewController.isComposeBtnPressed) {
-
-            let touch = touches.first
-            if let point = touch?.location(in: imageView){
-                touchpoint = point
-            }
-            path.move(to: startpoint)
-
-            //Draw Circle
-            path =  UIBezierPath(arcCenter: CGPoint(x: touchpoint.x,y: touchpoint.y), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
-            let strokeLayer = CAShapeLayer()
-            strokeLayer.fillColor = UIColor.orange.cgColor
-            strokeLayer.path = path.cgPath
-            strokeLayer.strokeColor = UIColor.orange.cgColor
-            imageView.layer.addSublayer(strokeLayer)
-            imageView.setNeedsDisplay()
-
-            //Draw Text
-            let textLayer = CATextLayer()
-            textLayer.frame = CGRect(x: touchpoint.x-5,y: touchpoint.y-10, width: 20, height: 20)
-            textLayer.font = UIFont(name: "Helvetica-Bold", size: 18)
-            textLayer.fontSize = 18;
-            textLayer.foregroundColor = UIColor.black.cgColor
-            textLayer.backgroundColor = UIColor.orange.cgColor
-            textLayer.alignmentMode = kCAAlignmentCenter;
-            UIImageControllerViewController.counter = UIImageControllerViewController.counter+1
-            textLayer.string = String(UIImageControllerViewController.counter);
-
-            imageView.layer.addSublayer(textLayer)
-            imageView.setNeedsDisplay()
-            path = UIBezierPath()
-
-            startpoint = touchpoint
-            performSegue(withIdentifier: "segueModal", sender: self)
+            addComment(touches)
         }
     }
     
@@ -170,6 +140,40 @@ class UIImageControllerViewController: UIViewController {
         }
     }
     
+    func addComment(_ touches:Set<UITouch>){
+
+        let touch = touches.first
+        if let point = touch?.location(in: imageView){
+            touchpoint = point
+        }
+
+        path.move(to: startpoint)
+        startpoint = touchpoint
+
+        //Draw Circle
+        path =  UIBezierPath(arcCenter: CGPoint(x: touchpoint.x,y: touchpoint.y), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+        let strokeLayer = CAShapeLayer()
+        strokeLayer.fillColor = UIColor.orange.cgColor
+        strokeLayer.strokeColor = UIColor.orange.cgColor
+
+        let textLayer = CATextLayer()
+        textLayer.frame = CGRect(x: touchpoint.x-5,y: touchpoint.y-10, width: 20, height: 20)
+        textLayer.font = UIFont(name: "Helvetica-Bold", size: 18)
+        textLayer.fontSize = 18;
+        textLayer.foregroundColor = UIColor.black.cgColor
+        textLayer.backgroundColor = UIColor.orange.cgColor
+        UIImageControllerViewController.counter = UIImageControllerViewController.counter+1
+        textLayer.string = String(UIImageControllerViewController.counter);
+
+        strokeLayer.path = path.cgPath
+        strokeLayer.addSublayer(textLayer)
+        imageView.layer.addSublayer(strokeLayer)
+        imageView.setNeedsDisplay()
+        path = UIBezierPath()
+
+        performSegue(withIdentifier: "segueModal", sender: self)
+    }
+
     func draw(){
         let strokeLayer = CAShapeLayer()
         strokeLayer.fillColor = nil
@@ -220,13 +224,22 @@ class UIImageControllerViewController: UIViewController {
         UIGraphicsEndImageContext()
         Feedback.send(fromSentButton: true)
         
-        // alert creation
-        let alert = UIAlertController(title: "App feedback sent", message: "Thanks for the feedback, you make our app better!", preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "Ok, Got it", style: UIAlertActionStyle.default, handler: {action in self.dismiss(animated: false, completion: nil)}))
-        
-        self.present(alert, animated: true, completion: nil)
-        
+        let toastLabel = UILabel(frame: CGRect(x: 50, y: (self.view.frame.size.height/2) - 100, width: 300, height: 50))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center;
+        toastLabel.font = UIFont(name: "Montserrat-Light", size: 12.0)
+        toastLabel.text = "THANK YOU FOR THE FEEDBACK!"
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+            self.dismiss(animated: false, completion: nil)
+        })
     }
 }
 
