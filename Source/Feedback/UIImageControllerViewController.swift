@@ -154,7 +154,7 @@ class UIImageControllerViewController: UIViewController {
         startpoint = touchpoint
 
         //Draw Circle
-        path =  UIBezierPath(arcCenter: CGPoint(x: touchpoint.x,y: touchpoint.y), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+        path =  UIBezierPath(arcCenter: CGPoint(x: touchpoint.x,y: touchpoint.y), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
         let strokeLayer = CAShapeLayer()
         strokeLayer.fillColor = UIColor.orange.cgColor
         strokeLayer.strokeColor = UIColor.orange.cgColor
@@ -242,7 +242,7 @@ class UIImageControllerViewController: UIViewController {
         toastLabel.layer.cornerRadius = 10;
         toastLabel.clipsToBounds  =  true
         self.view.addSubview(toastLabel)
-        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.1, options: .curveEaseOut, animations: {
             toastLabel.alpha = 0.0
         }, completion: {(isCompleted) in
             toastLabel.removeFromSuperview()

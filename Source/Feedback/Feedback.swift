@@ -128,17 +128,22 @@ public class Feedback{
     static var timeSent:String?
 
     public static func invokeFeedback() -> Void {
-        let uiViewController = topController(nil);
-        let instance:String = NSStringFromClass(uiViewController.classForCoder)
-        Feedback.instanceName = instance.replacingOccurrences(of: "_", with: "")
-        Feedback.creationDate = String(Int((Date().timeIntervalSince1970 * 1000.0).rounded()))
-        Feedback.screenshot = takeScreenshot(uiViewController.view)
-        
-        let feedbackBundle = Bundle(for: UIImageControllerViewController.self)
-        let feedbackStoryboard: UIStoryboard!
-        feedbackStoryboard = UIStoryboard(name: "Feedback", bundle: feedbackBundle)
-        let feedbackViewController : UIViewController = feedbackStoryboard.instantiateViewController(withIdentifier: "feedbackImageView") as! UIViewController
-        uiViewController.present(feedbackViewController, animated: true, completion: nil)
+        let bmsClient = BMSClient.sharedInstance
+        if bmsClient.bluemixRegion == nil || bmsClient.bluemixRegion == "" {
+            BMSLogger.internalLogger.error(message: "Failed to invoke feedback mode because the client was not yet initialized. Make sure that the BMSClient class has been initialized.")
+        }else {
+            let uiViewController = topController(nil);
+            let instance:String = NSStringFromClass(uiViewController.classForCoder)
+            Feedback.instanceName = instance.replacingOccurrences(of: "_", with: "")
+            Feedback.creationDate = String(Int((Date().timeIntervalSince1970 * 1000.0).rounded()))
+            Feedback.screenshot = takeScreenshot(uiViewController.view)
+
+            let feedbackBundle = Bundle(for: UIImageControllerViewController.self)
+            let feedbackStoryboard: UIStoryboard!
+            feedbackStoryboard = UIStoryboard(name: "Feedback", bundle: feedbackBundle)
+            let feedbackViewController : UIViewController = feedbackStoryboard.instantiateViewController(withIdentifier: "feedbackImageView")
+            uiViewController.present(feedbackViewController, animated: true, completion: nil)
+        }
     }
     
     public static func takeScreenshot(_ view: UIView) -> UIImage {
@@ -291,7 +296,7 @@ public class Feedback{
                     let body = NSMutableData()
                     body.append(fileData)
                     
-                    if let request: BaseRequest = try BMSLogger.buildLogSendRequestForFeedback(completionHandler:feedbackSendCallback) {
+                    if let request: Request = try BMSLogger.buildLogSendRequestForFeedback(completionHandler:feedbackSendCallback) {
                         request.send(requestBody: body as Data, completionHandler: feedbackSendCallback)
                     }
                 }

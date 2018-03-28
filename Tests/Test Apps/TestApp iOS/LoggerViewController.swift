@@ -168,7 +168,7 @@ class LoggerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // Ignore the warning on the extraneous underscore in Swift 2. It is there for Swift 3.
     @IBAction func triggerFeedbackMode(_ sender: UIButton) {
-        Feedback.invokeFeedback()
+        Analytics.triggerFeedbackMode()
     }
     
     // MARK: UIPickerViewDelegate protocol

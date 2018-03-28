@@ -107,7 +107,7 @@ public extension Logger {
                     let logPayloadJson = [Constants.outboundLogPayload: logsToSend]
                     let logPayloadData = try JSONSerialization.data(withJSONObject: logPayloadJson, options: [])
                     
-                    if let request: BaseRequest = try BMSLogger.buildLogSendRequest(completionHandler: logSendCallback) {
+                    if let request: Request = try BMSLogger.buildLogSendRequest(completionHandler: logSendCallback) {
                         request.send(requestBody: logPayloadData, completionHandler: logSendCallback)
                     }
                 }
@@ -177,7 +177,7 @@ public extension Logger {
                     let logPayloadJson = [Constants.outboundLogPayload: logsToSend]
                     let logPayloadData = try JSONSerialization.data(withJSONObject: logPayloadJson, options: [])
                     
-                    if let request: BaseRequest = try BMSLogger.buildLogSendRequest(completionHandler: analyticsSendCallback) {
+                    if let request: Request = try BMSLogger.buildLogSendRequest(completionHandler: analyticsSendCallback) {
                         request.send(requestBody: logPayloadData, completionHandler: analyticsSendCallback)
                     }
                 }
@@ -532,7 +532,7 @@ public class BMSLogger: LoggerDelegate {
     // MARK: - Sending logs
     
     // Build the Request object that will be used to send the logs to the server
-    internal static func buildLogSendRequest(completionHandler callback: BMSCompletionHandler) throws -> BaseRequest? {
+    internal static func buildLogSendRequest(completionHandler callback: BMSCompletionHandler) throws -> Request? {
         
         let bmsClient = BMSClient.sharedInstance
         var headers: [String: String] = ["Content-Type": "text/plain"]
@@ -565,7 +565,7 @@ public class BMSLogger: LoggerDelegate {
     }
     
     // Build the Request object that will be used to send the logs to the server
-    internal static func buildLogSendRequestForFeedback(completionHandler callback: BMSCompletionHandler) throws -> BaseRequest? {
+    internal static func buildLogSendRequestForFeedback(completionHandler callback: BMSCompletionHandler) throws -> Request? {
         
         var logUploadUrl = ""
         let bmsClient = BMSClient.sharedInstance
