@@ -28,7 +28,8 @@ class UIImageControllerViewController: UIViewController {
     static var isMarkerBtnPressed:Bool = false
     static var isComposeBtnPressed:Bool = false
     static var ext:UIImage?
-    static var counter:Int = 0;
+    static var counter:Int = 0
+    static var isImageEdited:Bool = false
     
     @IBOutlet weak var composeBtn: UIBarButtonItem!
     @IBOutlet weak var editBtn: UIBarButtonItem!
@@ -82,6 +83,7 @@ class UIImageControllerViewController: UIViewController {
         super.viewDidLoad()
         imageView.isUserInteractionEnabled = false
         UIImageControllerViewController.touchEnabled = false
+        UIImageControllerViewController.isImageEdited = false
         UIImageControllerViewController.counter=0
         // Do any additional setup after loading the view.
         imageView.clipsToBounds = true
@@ -96,7 +98,7 @@ class UIImageControllerViewController: UIViewController {
     
     @objc func normalTap(_ sender: UIGestureRecognizer){
         print("Normal tap")
-        drawImageView(mainImage: #imageLiteral(resourceName: "edit-1"), withBadge:#imageLiteral(resourceName: "eraser") )
+        //drawImageView(mainImage: #imageLiteral(resourceName: "edit-1"), withBadge:#imageLiteral(resourceName: "eraser") )
     }
     
     func drawImageView(mainImage: UIImage, withBadge badge: UIImage) -> UIImage {
@@ -141,6 +143,7 @@ class UIImageControllerViewController: UIViewController {
     }
     
     func addComment(_ touches:Set<UITouch>){
+        UIImageControllerViewController.isImageEdited = true
 
         let touch = touches.first
         if let point = touch?.location(in: imageView){
@@ -175,6 +178,8 @@ class UIImageControllerViewController: UIViewController {
     }
 
     func draw(){
+        UIImageControllerViewController.isImageEdited = true
+
         let strokeLayer = CAShapeLayer()
         strokeLayer.fillColor = nil
         strokeLayer.lineWidth = 5
@@ -210,14 +215,17 @@ class UIImageControllerViewController: UIViewController {
      } */
     
     @IBAction func closeButton(_ sender: Any) {
-        
-        let alert = UIAlertController(title: "Do you want to exit?", message: "", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Yes, Dismiss", style: UIAlertActionStyle.default, handler: {action in self.dismiss(animated: false, completion: nil)}))
-        alert.addAction(UIAlertAction(title: "No, Cancel", style: UIAlertActionStyle.cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        if UIImageControllerViewController.isImageEdited{
+            let alert = UIAlertController(title: "Close Feedback", message: "Do you want to Send or Discard the Feedback before exit?", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Send", style: UIAlertActionStyle.default, handler: {action in self.sendFeedback()}))
+            alert.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.cancel, handler: {action in self.dismiss(animated: false, completion: nil)}))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            self.dismiss(animated: false, completion: nil)
+        }
     }
     
-    @IBAction func doneButton(_ sender: UIBarButtonItem) {
+    internal func sendFeedback() -> Void{
         UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, UIScreen.main.scale)
         imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
         Feedback.screenshot = UIGraphicsGetImageFromCurrentImageContext()
@@ -240,6 +248,17 @@ class UIImageControllerViewController: UIViewController {
             toastLabel.removeFromSuperview()
             self.dismiss(animated: false, completion: nil)
         })
+    }
+
+    @IBAction func doneButton(_ sender: UIBarButtonItem) {
+        if UIImageControllerViewController.isImageEdited{
+            self.sendFeedback()
+        }else{
+            let alert = UIAlertController(title: "Send Feedback", message: "Nothing to send, since no comments added. Do you want to exit?", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Yes, Exit", style: UIAlertActionStyle.default, handler: {action in self.dismiss(animated: false, completion: nil)}))
+            alert.addAction(UIAlertAction(title: "No, Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
 
