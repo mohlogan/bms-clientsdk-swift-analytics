@@ -42,12 +42,18 @@ class UIImageControllerViewController: UIViewController {
     @IBOutlet var imageViewGesture: UITapGestureRecognizer!
     
     @IBAction func editButtonTapped(_ sender: Any) {
+        if( UIImageControllerViewController.isMarkerBtnPressed == true) {
+            UIImageControllerViewController.isMarkerBtnPressed = false
+            markerBtn.tintColor = UIColor.black
+        }
+        if( UIImageControllerViewController.isComposeBtnPressed == true) {
+            UIImageControllerViewController.isComposeBtnPressed = false
+            compBtn.tintColor = UIColor.black
+        }
         if editBtn.tintColor == UIColor.black {
-            // UIImageControllerViewController.isMarkerBtnPressed = false
             imageView.isUserInteractionEnabled = true
             editBtn.tintColor = UIColor.orange
             UIImageControllerViewController.touchEnabled = true
-            
         } else {
             editBtn.tintColor = UIColor.black
             UIImageControllerViewController.touchEnabled = false
@@ -55,6 +61,14 @@ class UIImageControllerViewController: UIViewController {
     }
     
     @IBAction func markerButtonTapped(_ sender: UIBarButtonItem) {
+        if( UIImageControllerViewController.touchEnabled == true) {
+            UIImageControllerViewController.touchEnabled = false
+            editBtn.tintColor = UIColor.black
+        }
+        if( UIImageControllerViewController.isComposeBtnPressed == true) {
+            UIImageControllerViewController.isComposeBtnPressed = false
+            compBtn.tintColor = UIColor.black
+        }
         if markerBtn.tintColor == UIColor.black {
             UIImageControllerViewController.isMarkerBtnPressed = true
             markerBtn.tintColor = UIColor.orange
@@ -195,11 +209,17 @@ class UIImageControllerViewController: UIViewController {
     }
     
     @IBAction func composeFeedButton(_ sender: Any) {
-        
+        if( UIImageControllerViewController.touchEnabled == true) {
+            UIImageControllerViewController.touchEnabled = false
+            editBtn.tintColor = UIColor.black
+        }
+        if( UIImageControllerViewController.isMarkerBtnPressed == true) {
+            UIImageControllerViewController.isMarkerBtnPressed = false
+            markerBtn.tintColor = UIColor.black
+        }
         if (UIImageControllerViewController.isComposeBtnPressed ){
             UIImageControllerViewController.isComposeBtnPressed = false
             compBtn.tintColor = UIColor.black
-            
         }else {
             UIImageControllerViewController.isComposeBtnPressed = true
             compBtn.tintColor = UIColor.orange
