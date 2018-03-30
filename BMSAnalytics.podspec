@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'AnalyticsDep' do |cs|
     cs.dependency 'BMSCore', '~> 2.1'
-    cs.dependency 'SSZipArchive'
+    cs.dependency 'Zip', '0.8.0'
   end
 end

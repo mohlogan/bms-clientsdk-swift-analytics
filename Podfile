@@ -1,8 +1,12 @@
 use_frameworks!
 
+def swift2_overrides
+    pod 'Zip', git: 'https://github.com/marmelroy/Zip.git', branch: 'swift2.3'
+end
 
 def shared_pod
 	pod 'BMSCore', '~> 2.2'
+	swift2_overrides
 	pod 'Zip', '0.8.0'
 end
 
