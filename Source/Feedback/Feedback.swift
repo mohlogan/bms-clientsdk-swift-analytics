@@ -18,12 +18,8 @@
 #if swift(>=3.0)
 
 import UIKit
-#if UseCarthage
-    import ZipArchive
-#else
-    import SSZipArchive
-#endif
 import BMSCore
+import Zip
 
 public class Feedback{
     
@@ -132,6 +128,10 @@ public class Feedback{
         if bmsClient.bluemixRegion == nil || bmsClient.bluemixRegion == "" {
             BMSLogger.internalLogger.error(message: "Failed to invoke feedback mode because the client was not yet initialized. Make sure that the BMSClient class has been initialized.")
         }else {
+            messages = [String]()
+            instanceName = ""
+            screenshot=nil
+
             let uiViewController = topController(nil);
             let instance:String = NSStringFromClass(uiViewController.classForCoder)
             Feedback.instanceName = instance.replacingOccurrences(of: "_", with: "")
@@ -175,12 +175,15 @@ public class Feedback{
             updateSummaryJsonFile(getInstanceName(), timesent: "", remove: false)
         }
         let filesToSend:[String] = getListOfFeedbackFilesToSend()
-        for i in 0..<filesToSend.count{
-            if BMSLogger.fileManager.fileExists(atPath: BMSLogger.feedbackDocumentPath+filesToSend[i]) {
-                Feedback.timeSent = String(Int((Date().timeIntervalSince1970 * 1000.0).rounded()))
-                Feedback.timeSent = addAndReturnTimeSent(instanceName: filesToSend[i], timeSent: Feedback.timeSent!)
-                createZip(instanceName: filesToSend[i])
-                sendFeedback(instanceName: filesToSend[i])
+        if filesToSend.count != 0 {
+            print("filesToSend count = " + String(filesToSend.count))
+            for i in 0..<filesToSend.count{
+                if BMSLogger.fileManager.fileExists(atPath: BMSLogger.feedbackDocumentPath+filesToSend[i]) {
+                    Feedback.timeSent = String(Int((Date().timeIntervalSince1970 * 1000.0).rounded()))
+                    Feedback.timeSent = addAndReturnTimeSent(instanceName: filesToSend[i], timeSent: Feedback.timeSent!)
+                    createZip(instanceName: filesToSend[i])
+                    sendFeedback(instanceName: filesToSend[i])
+                }
             }
         }
     }
@@ -204,7 +207,7 @@ public class Feedback{
     }
     
     internal static func sendFeedback(instanceName: String){
-        let zipFile:String = BMSLogger.feedbackDocumentPath + instanceName + ".zip"
+        let zipFile:String = BMSLogger.feedbackDocumentPath + "/../"+instanceName + ".zip"
         let instanceDocPath:String = BMSLogger.feedbackDocumentPath + instanceName
         
         func completionHandler() -> BMSCompletionHandler {
@@ -226,6 +229,10 @@ public class Feedback{
                         try BMSLogger.fileManager.removeItem(atPath: instanceDocPath)
                     }catch let error{ print(error.localizedDescription)}
                     updateSummaryJsonFile(instanceName, timesent: Feedback.timeSent!, remove: true)
+                }else {
+                    do {
+                        try BMSLogger.fileManager.removeItem(atPath: zipFile)
+                    }catch let error{ print(error.localizedDescription)}
                 }
             }
         }
@@ -341,19 +348,21 @@ public class Feedback{
     /* Function adds timeSent to feedback.json if its not exists otherwise returns the timestamp*/
     internal static func addAndReturnTimeSent(instanceName : String, timeSent: String) -> String{
         let instanceJsonFile:String = BMSLogger.feedbackDocumentPath+instanceName+"/feedback.json"
-        let feedbackData = convertFileToData(filepath: instanceJsonFile)
-        do {
-            let json = try JSONSerialization.jsonObject(with: feedbackData!, options: JSONSerialization.ReadingOptions.mutableContainers)
-            var feedback = FeedbackJson(json: json as! [String : Any])
-            if feedback.timeSent.isEmpty {
-                feedback.timeSent=timeSent
-                write(toFile: instanceJsonFile, feedbackdata: convertToJSON(feedback.dictionaryRepresentation)!, append: false)
-                return timeSent
-            }else {
-               return feedback.timeSent
+        if BMSLogger.fileManager.fileExists(atPath: instanceJsonFile){
+            let feedbackData = convertFileToData(filepath: instanceJsonFile)
+            do {
+                let json = try JSONSerialization.jsonObject(with: feedbackData!, options: JSONSerialization.ReadingOptions.mutableContainers)
+                var feedback = FeedbackJson(json: json as! [String : Any])
+                if feedback.timeSent.isEmpty {
+                    feedback.timeSent=timeSent
+                    write(toFile: instanceJsonFile, feedbackdata: convertToJSON(feedback.dictionaryRepresentation)!, append: false)
+                    return timeSent
+                }else {
+                    return feedback.timeSent
+                }
+            }catch let error{
+                print("addTimeSent: Error: " + error.localizedDescription)
             }
-        }catch let error{
-            print("addTimeSent: Error: " + error.localizedDescription)
         }
         return ""
     }
@@ -370,7 +379,7 @@ public class Feedback{
                 print("getListOfFeedbackFilesToSend: Error : " + jsonErr.localizedDescription)
             }
         }
-        return [""]
+        return []
     }
     
     internal static func updateSummaryJsonFile(_ entry: String, timesent:String, remove:Bool) -> Void {
@@ -428,19 +437,15 @@ public class Feedback{
     internal static func createZip(instanceName:String) -> Void {
         let zipPath = BMSLogger.feedbackDocumentPath+instanceName+".zip";
         let sampleDataPath = BMSLogger.feedbackDocumentPath+instanceName;
-        let password = ""
-        
-        let success = SSZipArchive.createZipFile(atPath: zipPath,
-                                                 withContentsOfDirectory: sampleDataPath,
-                                                 keepParentDirectory: false,
-                                                 compressionLevel: -1,
-                                                 password: password.isEmpty == false ? password : nil,
-                                                 aes: true,
-                                                 progressHandler: nil)
-        if success {
-            print("Success zip")
-        } else {
-            print("No success zip")
+        let imageFile = BMSLogger.feedbackDocumentPath+instanceName+"/image.png"
+        let jsonFile = BMSLogger.feedbackDocumentPath+instanceName+"/feedback.json"
+
+        do {
+            let zipFilePath = try Zip.quickZipFiles([URL(string: imageFile)!,URL(string: jsonFile)!], fileName: instanceName )
+            print ("zipFilePath: " + zipFilePath.absoluteString)
+        }
+        catch {
+            print("Something went wrong")
         }
     }
     

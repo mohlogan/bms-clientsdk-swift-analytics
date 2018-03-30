@@ -1,2 +1,2 @@
-github "ZipArchive/ZipArchive"
+github "marmelroy/Zip" "0.8.0"
 github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core" ~> 2.0
