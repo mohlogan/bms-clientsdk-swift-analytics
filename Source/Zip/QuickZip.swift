@@ -6,6 +6,10 @@
 //  Copyright © 2016 Roy Marmelstein. All rights reserved.
 //
 
+// MARK: - Swift 3
+
+#if swift(>=3.0)
+
 import Foundation
 
 extension Zip {
@@ -95,3 +99,5 @@ extension Zip {
     
     
 }
+
+#endif

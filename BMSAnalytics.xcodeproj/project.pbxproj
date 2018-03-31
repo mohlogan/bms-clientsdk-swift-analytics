@@ -46,6 +46,17 @@
 		D0898F0320628B42007DEC72 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0898F0220628B42007DEC72 /* Feedback.storyboard */; };
 		D0C50EE52062C55E00C2175D /* UIImageControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C50EE42062C55E00C2175D /* UIImageControllerViewController.swift */; };
 		D0C50EF02062C5A000C2175D /* ComposeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C50EEF2062C5A000C2175D /* ComposeEditorViewController.swift */; };
+		D0FA9F1E206E4CDF00B89BDD /* ZipUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FA9F11206E4CDF00B89BDD /* ZipUtilities.swift */; };
+		D0FA9F1F206E4CDF00B89BDD /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = D0FA9F13206E4CDF00B89BDD /* unzip.c */; };
+		D0FA9F20206E4CDF00B89BDD /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = D0FA9F14206E4CDF00B89BDD /* zip.c */; };
+		D0FA9F21206E4CDF00B89BDD /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = D0FA9F15206E4CDF00B89BDD /* ioapi.c */; };
+		D0FA9F22206E4CDF00B89BDD /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = D0FA9F16206E4CDF00B89BDD /* crypt.h */; };
+		D0FA9F23206E4CDF00B89BDD /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = D0FA9F17206E4CDF00B89BDD /* zip.h */; };
+		D0FA9F24206E4CDF00B89BDD /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = D0FA9F18206E4CDF00B89BDD /* unzip.h */; };
+		D0FA9F25206E4CDF00B89BDD /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = D0FA9F1A206E4CDF00B89BDD /* ioapi.h */; };
+		D0FA9F26206E4CDF00B89BDD /* QuickZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FA9F1B206E4CDF00B89BDD /* QuickZip.swift */; };
+		D0FA9F28206E4CDF00B89BDD /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FA9F1D206E4CDF00B89BDD /* Zip.swift */; };
+		D0FA9F33206E537F00B89BDD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FA9F32206E537F00B89BDD /* libz.tbd */; };
 		D41965C0880FFA49D8D23F74 /* Pods_TestApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C932B74BCC35D937C2587F9D /* Pods_TestApp_iOS.framework */; };
 		F3BF6407787EA0042241305B /* Pods_BMSAnalytics_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76F7CEBBF5F2EA948B2C2C1 /* Pods_BMSAnalytics_watchOS.framework */; };
 		F666EEA3DA33B040057AA3EB /* Pods_BMSAnalytics_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7962567D7A452F8C5CD51F5E /* Pods_BMSAnalytics_Tests.framework */; };
@@ -149,20 +160,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 13558E710417FA60A7569B23B18D98DF;
 			remoteInfo = "Pods-TestApp watchOS Extension";
-		};
-		D0075A9C2068CB800026E9CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9276B4C91C6D1D9E00E61F45 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 92F188B41A8BBF082723AA6C794E25F7;
-			remoteInfo = "SSZipArchive-iOS";
-		};
-		D0075A9E2068CB800026E9CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9276B4C91C6D1D9E00E61F45 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 53F59FC76245B51067B6EBA9FDE52D60;
-			remoteInfo = "SSZipArchive-watchOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -325,6 +322,19 @@
 		D0C50EEF2062C5A000C2175D /* ComposeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeEditorViewController.swift; sourceTree = "<group>"; };
 		D0F06264206BE9AF0029001F /* ZipArchive */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ZipArchive; path = Carthage/Build/iOS/ZipArchive.framework/ZipArchive; sourceTree = "<group>"; };
 		D0F06266206BEA260029001F /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZipArchive.framework; path = Carthage/Build/iOS/ZipArchive.framework; sourceTree = "<group>"; };
+		D0FA9F11206E4CDF00B89BDD /* ZipUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipUtilities.swift; sourceTree = "<group>"; };
+		D0FA9F13206E4CDF00B89BDD /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		D0FA9F14206E4CDF00B89BDD /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		D0FA9F15206E4CDF00B89BDD /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		D0FA9F16206E4CDF00B89BDD /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		D0FA9F17206E4CDF00B89BDD /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		D0FA9F18206E4CDF00B89BDD /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		D0FA9F19206E4CDF00B89BDD /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		D0FA9F1A206E4CDF00B89BDD /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		D0FA9F1B206E4CDF00B89BDD /* QuickZip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickZip.swift; sourceTree = "<group>"; };
+		D0FA9F1D206E4CDF00B89BDD /* Zip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zip.swift; sourceTree = "<group>"; };
+		D0FA9F32206E537F00B89BDD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D0FA9F34206E8A3900B89BDD /* Zip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Zip.h; sourceTree = "<group>"; };
 		D47A33A1F7D17C3BC0BA13C1 /* Pods_TestApp_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -340,6 +350,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FA9F33206E537F00B89BDD /* libz.tbd in Frameworks */,
 				56DB9C02B9F67782F2C51BA5 /* Pods_BMSAnalytics_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +394,7 @@
 		09097EECC7A66AF6A33558BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0FA9F32206E537F00B89BDD /* libz.tbd */,
 				D0F06266206BEA260029001F /* ZipArchive.framework */,
 				D0F06264206BE9AF0029001F /* ZipArchive */,
 				9276B4B41C6D1D9E00E61F45 /* Pods */,
@@ -401,6 +413,7 @@
 			children = (
 				9221C0DB1C4EE159007FA9D0 /* Error.swift */,
 				9276B4651C6A621F00E61F45 /* Constants.swift */,
+				D0FA9F10206E4CDF00B89BDD /* Zip */,
 				D0E2978E2063925100690C09 /* Feedback */,
 				9221C0061C4ED26F007FA9D0 /* Analytics */,
 				9221C0071C4ED26F007FA9D0 /* Logger */,
@@ -678,8 +691,6 @@
 				92E7AACE1CB700E500FEC069 /* Pods_BMSAnalytics_watchOS.framework */,
 				92E7AAD01CB700E500FEC069 /* Pods_TestApp_iOS.framework */,
 				92E7AAD41CB700E500FEC069 /* Pods_TestApp_watchOS_Extension.framework */,
-				D0075A9D2068CB800026E9CB /* SSZipArchive.framework */,
-				D0075A9F2068CB800026E9CB /* SSZipArchive.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -816,6 +827,33 @@
 			path = Feedback;
 			sourceTree = "<group>";
 		};
+		D0FA9F10206E4CDF00B89BDD /* Zip */ = {
+			isa = PBXGroup;
+			children = (
+				D0FA9F12206E4CDF00B89BDD /* minizip */,
+				D0FA9F11206E4CDF00B89BDD /* ZipUtilities.swift */,
+				D0FA9F1B206E4CDF00B89BDD /* QuickZip.swift */,
+				D0FA9F1D206E4CDF00B89BDD /* Zip.swift */,
+				D0FA9F34206E8A3900B89BDD /* Zip.h */,
+			);
+			path = Zip;
+			sourceTree = "<group>";
+		};
+		D0FA9F12206E4CDF00B89BDD /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				D0FA9F13206E4CDF00B89BDD /* unzip.c */,
+				D0FA9F14206E4CDF00B89BDD /* zip.c */,
+				D0FA9F15206E4CDF00B89BDD /* ioapi.c */,
+				D0FA9F16206E4CDF00B89BDD /* crypt.h */,
+				D0FA9F17206E4CDF00B89BDD /* zip.h */,
+				D0FA9F18206E4CDF00B89BDD /* unzip.h */,
+				D0FA9F19206E4CDF00B89BDD /* module.modulemap */,
+				D0FA9F1A206E4CDF00B89BDD /* ioapi.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -823,7 +861,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FA9F23206E4CDF00B89BDD /* zip.h in Headers */,
 				9221C0291C4ED280007FA9D0 /* BMSAnalytics.h in Headers */,
+				D0FA9F22206E4CDF00B89BDD /* crypt.h in Headers */,
+				D0FA9F24206E4CDF00B89BDD /* unzip.h in Headers */,
+				D0FA9F25206E4CDF00B89BDD /* ioapi.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,7 +889,6 @@
 				926CF80A1C4ECC330084355B /* Frameworks */,
 				926CF80B1C4ECC330084355B /* Headers */,
 				926CF80C1C4ECC330084355B /* Resources */,
-				03F5C252A0D409021BAD5681 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -867,7 +908,6 @@
 				926CF8151C4ECC330084355B /* Frameworks */,
 				926CF8161C4ECC330084355B /* Resources */,
 				43936358C6CFCD2438D5D60C /* [CP] Embed Pods Frameworks */,
-				798FEBC68CF94A79AE980E9C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -888,7 +928,6 @@
 				926CF8291C4ECD930084355B /* Frameworks */,
 				926CF82A1C4ECD930084355B /* Headers */,
 				926CF82B1C4ECD930084355B /* Resources */,
-				A5A063ED2B27288D7B84A4A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -909,7 +948,6 @@
 				926CF8371C4ECDBD0084355B /* Resources */,
 				926CF86F1C4ECDF80084355B /* Embed Watch Content */,
 				63AB019A66D9C2413788B811 /* [CP] Embed Pods Frameworks */,
-				8EFBD7F3789393FBBECC5E64 /* [CP] Copy Pods Resources */,
 				D05A3556206D1058000F11EF /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -950,7 +988,6 @@
 				926CF8561C4ECDF80084355B /* Frameworks */,
 				926CF8571C4ECDF80084355B /* Resources */,
 				EE6349EA5BE1BC83075D1146 /* [CP] Embed Pods Frameworks */,
-				0BC5376DB92DB22077FC6FBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1087,20 +1124,6 @@
 			remoteRef = 92E7AAD31CB700E500FEC069 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D0075A9D2068CB800026E9CB /* SSZipArchive.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SSZipArchive.framework;
-			remoteRef = D0075A9C2068CB800026E9CB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D0075A9F2068CB800026E9CB /* SSZipArchive.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SSZipArchive.framework;
-			remoteRef = D0075A9E2068CB800026E9CB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1158,21 +1181,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03F5C252A0D409021BAD5681 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSAnalytics iOS/Pods-BMSAnalytics iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		049B0E80ED09CE292FD0E3FB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1191,21 +1199,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0BC5376DB92DB22077FC6FBA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp watchOS Extension/Pods-TestApp watchOS Extension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		43936358C6CFCD2438D5D60C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1215,13 +1208,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BMSAnalytics Tests/Pods-BMSAnalytics Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI-iOS/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore-iOS/BMSCore.framework",
-				"${BUILT_PRODUCTS_DIR}/Zip-iOS/Zip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1255,47 +1246,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestApp iOS/Pods-TestApp iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI-iOS/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore-iOS/BMSCore.framework",
-				"${BUILT_PRODUCTS_DIR}/Zip-iOS/Zip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp iOS/Pods-TestApp iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		798FEBC68CF94A79AE980E9C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSAnalytics Tests/Pods-BMSAnalytics Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8EFBD7F3789393FBBECC5E64 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp iOS/Pods-TestApp iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9A480685350D09605BA9C52A /* [CP] Check Pods Manifest.lock */ = {
@@ -1334,21 +1293,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A5A063ED2B27288D7B84A4A6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSAnalytics watchOS/Pods-BMSAnalytics watchOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DF0E36AF437F112003BD4AD0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1376,13 +1320,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestApp watchOS Extension/Pods-TestApp watchOS Extension-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI-watchOS/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore-watchOS/BMSCore.framework",
-				"${BUILT_PRODUCTS_DIR}/Zip-watchOS/Zip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1397,12 +1339,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9221C0DC1C4EE159007FA9D0 /* Error.swift in Sources */,
+				D0FA9F21206E4CDF00B89BDD /* ioapi.c in Sources */,
+				D0FA9F1F206E4CDF00B89BDD /* unzip.c in Sources */,
 				9221C0481C4ED9AF007FA9D0 /* BMSAnalytics+iOS.swift in Sources */,
+				D0FA9F1E206E4CDF00B89BDD /* ZipUtilities.swift in Sources */,
 				92B9DF6B1DF9FCC800BD3605 /* LocationDelegate.swift in Sources */,
 				9276B4661C6A621F00E61F45 /* Constants.swift in Sources */,
 				D0C50EE52062C55E00C2175D /* UIImageControllerViewController.swift in Sources */,
+				D0FA9F28206E4CDF00B89BDD /* Zip.swift in Sources */,
 				9221C04D1C4ED9BC007FA9D0 /* BMSLogger.swift in Sources */,
 				D066DE8B20629B1200F1EFEC /* Feedback.swift in Sources */,
+				D0FA9F20206E4CDF00B89BDD /* zip.c in Sources */,
+				D0FA9F26206E4CDF00B89BDD /* QuickZip.swift in Sources */,
 				9221C0461C4ED9AF007FA9D0 /* BMSAnalytics.swift in Sources */,
 				D0C50EF02062C5A000C2175D /* ComposeEditorViewController.swift in Sources */,
 			);
@@ -1630,6 +1578,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalytics;
 				PRODUCT_NAME = BMSAnalytics;
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Source/Zip/minizip";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1661,6 +1610,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalytics;
 				PRODUCT_NAME = BMSAnalytics;
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Source/Zip/minizip";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};

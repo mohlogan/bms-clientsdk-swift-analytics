@@ -19,7 +19,6 @@
 
 import UIKit
 import BMSCore
-import Zip
 
 public class Feedback{
     
@@ -463,7 +462,7 @@ public class Feedback{
         do {
             fileContent = try Data(contentsOf: URL(fileURLWithPath: filepath), options: .mappedIfSafe)
         } catch let error {
-            print("convertFileToData : Error :" + error.localizedDescription)
+            //print("convertFileToData : Error :" + error.localizedDescription)
             return nil
         }
         return fileContent

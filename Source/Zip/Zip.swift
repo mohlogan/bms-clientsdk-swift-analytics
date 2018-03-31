@@ -6,6 +6,10 @@
 //  Copyright © 2015 Roy Marmelstein. All rights reserved.
 //
 
+// MARK: - Swift 3
+
+#if swift(>=3.0)
+
 import Foundation
 import minizip
 
@@ -401,3 +405,5 @@ public class Zip {
     }
     
 }
+
+#endif

@@ -9,9 +9,13 @@ Pod::Spec.new do |s|
   s.authors           = { 'IBM Bluemix Services Mobile SDK' => 'mobilsdk@us.ibm.com' }
 
   s.source       = { :git => 'https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics.git', :tag => s.version }
-  s.source_files = 'Source/**/*.swift'
+  s.source_files = 'Source/**/*.swift','Source/Zip/*.{swift,h}','Source/Zip/minizip/*.{c,h}','Source/Zip/minizip/aes/*.{c,h}'
   s.ios.exclude_files = 'Source/**/*watchOS*.swift'
-  s.watchos.exclude_files = 'Source/**/*iOS*.swift','Source/Feedback'
+  s.watchos.exclude_files = 'Source/**/*iOS*.swift','Source/Feedback','Source/Zip/*.{swift,h}', 'Source/Zip/minizip/*.{c,h}', 'Source/Zip/minizip/aes/*.{c,h}'
+  s.ios.public_header_files = 'Source/Zip/*.h'
+  s.pod_target_xcconfig = {'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/Source/Zip/minizip/**','LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Source/Zip/'}
+  s.libraries = 'z'
+  s.preserve_paths  = 'Source/Zip/minizip/module.modulemap'
 
   s.default_subspec = 'AnalyticsDep'
 
@@ -24,6 +28,5 @@ Pod::Spec.new do |s|
 
   s.subspec 'AnalyticsDep' do |cs|
     cs.dependency 'BMSCore', '~> 2.1'
-    cs.dependency 'Zip', '0.8.0'
   end
 end

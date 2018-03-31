@@ -1,3 +1,2 @@
 github "ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api" "2.2.3"
 github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core" "2.3.5"
-github "marmelroy/Zip" "0.8.0"

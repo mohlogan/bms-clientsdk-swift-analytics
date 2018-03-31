@@ -5,6 +5,9 @@
 //  Created by Roy Marmelstein on 26/01/2016.
 //  Copyright © 2016 Roy Marmelstein. All rights reserved.
 //
+// MARK: - Swift 3
+
+#if swift(>=3.0)
 
 import Foundation
 
@@ -82,3 +85,5 @@ internal class ZipUtilities {
     }
 
 }
+
+#endif
