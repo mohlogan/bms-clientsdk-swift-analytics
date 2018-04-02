@@ -158,7 +158,7 @@ class UIImageControllerViewController: UIViewController {
     
     func addComment(_ touches:Set<UITouch>){
         UIImageControllerViewController.isImageEdited = true
-
+        
         let touch = touches.first
         if let point = touch?.location(in: imageView){
             touchpoint = point
@@ -167,28 +167,30 @@ class UIImageControllerViewController: UIViewController {
         path.move(to: startpoint)
         startpoint = touchpoint
 
-        //Draw Circle
-        path =  UIBezierPath(arcCenter: CGPoint(x: touchpoint.x,y: touchpoint.y), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
-        let strokeLayer = CAShapeLayer()
-        strokeLayer.fillColor = UIColor.orange.cgColor
-        strokeLayer.strokeColor = UIColor.orange.cgColor
+        if (imageView.point(inside: startpoint, with: nil)){
+            //Draw Circle
+            path =  UIBezierPath(arcCenter: CGPoint(x: touchpoint.x,y: touchpoint.y), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
+            let strokeLayer = CAShapeLayer()
+            strokeLayer.fillColor = UIColor.orange.cgColor
+            strokeLayer.strokeColor = UIColor.orange.cgColor
 
-        let textLayer = CATextLayer()
-        textLayer.frame = CGRect(x: touchpoint.x-5,y: touchpoint.y-10, width: 20, height: 20)
-        textLayer.font = UIFont(name: "Helvetica-Bold", size: 18)
-        textLayer.fontSize = 18;
-        textLayer.foregroundColor = UIColor.black.cgColor
-        textLayer.backgroundColor = UIColor.orange.cgColor
-        UIImageControllerViewController.counter = UIImageControllerViewController.counter+1
-        textLayer.string = String(UIImageControllerViewController.counter);
+            let textLayer = CATextLayer()
+            textLayer.frame = CGRect(x: touchpoint.x-5,y: touchpoint.y-10, width: 20, height: 20)
+            textLayer.font = UIFont(name: "Helvetica-Bold", size: 18)
+            textLayer.fontSize = 18;
+            textLayer.foregroundColor = UIColor.black.cgColor
+            textLayer.backgroundColor = UIColor.orange.cgColor
+            UIImageControllerViewController.counter = UIImageControllerViewController.counter+1
+            textLayer.string = String(UIImageControllerViewController.counter);
 
-        strokeLayer.path = path.cgPath
-        strokeLayer.addSublayer(textLayer)
-        imageView.layer.addSublayer(strokeLayer)
-        imageView.setNeedsDisplay()
-        path = UIBezierPath()
+            strokeLayer.path = path.cgPath
+            strokeLayer.addSublayer(textLayer)
+            imageView.layer.addSublayer(strokeLayer)
+            imageView.setNeedsDisplay()
+            path = UIBezierPath()
 
-        performSegue(withIdentifier: "segueModal", sender: self)
+            performSegue(withIdentifier: "segueModal", sender: self)
+        }
     }
 
     func draw(){
