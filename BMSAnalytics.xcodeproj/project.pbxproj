@@ -317,11 +317,11 @@
 		C932B74BCC35D937C2587F9D /* Pods_TestApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D066DE7F20629A3F00F1EFEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D066DE8A20629B1200F1EFEC /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		D077EAF52072504500AACF2F /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		D077EB0020725CCA00AACF2F /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		D0898F0220628B42007DEC72 /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
 		D0C50EE42062C55E00C2175D /* UIImageControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageControllerViewController.swift; sourceTree = "<group>"; };
 		D0C50EEF2062C5A000C2175D /* ComposeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeEditorViewController.swift; sourceTree = "<group>"; };
-		D0F06264206BE9AF0029001F /* ZipArchive */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ZipArchive; path = Carthage/Build/iOS/ZipArchive.framework/ZipArchive; sourceTree = "<group>"; };
-		D0F06266206BEA260029001F /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZipArchive.framework; path = Carthage/Build/iOS/ZipArchive.framework; sourceTree = "<group>"; };
 		D0FA9F11206E4CDF00B89BDD /* ZipUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipUtilities.swift; sourceTree = "<group>"; };
 		D0FA9F13206E4CDF00B89BDD /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
 		D0FA9F14206E4CDF00B89BDD /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
@@ -329,7 +329,6 @@
 		D0FA9F16206E4CDF00B89BDD /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		D0FA9F17206E4CDF00B89BDD /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		D0FA9F18206E4CDF00B89BDD /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
-		D0FA9F19206E4CDF00B89BDD /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		D0FA9F1A206E4CDF00B89BDD /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
 		D0FA9F1B206E4CDF00B89BDD /* QuickZip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickZip.swift; sourceTree = "<group>"; };
 		D0FA9F1D206E4CDF00B89BDD /* Zip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zip.swift; sourceTree = "<group>"; };
@@ -395,8 +394,6 @@
 			isa = PBXGroup;
 			children = (
 				D0FA9F32206E537F00B89BDD /* libz.tbd */,
-				D0F06266206BEA260029001F /* ZipArchive.framework */,
-				D0F06264206BE9AF0029001F /* ZipArchive */,
 				9276B4B41C6D1D9E00E61F45 /* Pods */,
 				41FAB640CEFBABAE20B12CA1 /* Pods_BMSAnalytics_iOS.framework */,
 				A76F7CEBBF5F2EA948B2C2C1 /* Pods_BMSAnalytics_watchOS.framework */,
@@ -447,6 +444,7 @@
 				9221C0091C4ED26F007FA9D0 /* BMSAnalytics.h */,
 				9221C00B1C4ED26F007FA9D0 /* Info_iOS.plist */,
 				9221C00C1C4ED26F007FA9D0 /* Info_watchOS.plist */,
+				D077EB0020725CCA00AACF2F /* module.modulemap */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -842,13 +840,13 @@
 		D0FA9F12206E4CDF00B89BDD /* minizip */ = {
 			isa = PBXGroup;
 			children = (
+				D077EAF52072504500AACF2F /* module.modulemap */,
 				D0FA9F13206E4CDF00B89BDD /* unzip.c */,
 				D0FA9F14206E4CDF00B89BDD /* zip.c */,
 				D0FA9F15206E4CDF00B89BDD /* ioapi.c */,
 				D0FA9F16206E4CDF00B89BDD /* crypt.h */,
 				D0FA9F17206E4CDF00B89BDD /* zip.h */,
 				D0FA9F18206E4CDF00B89BDD /* unzip.h */,
-				D0FA9F19206E4CDF00B89BDD /* module.modulemap */,
 				D0FA9F1A206E4CDF00B89BDD /* ioapi.h */,
 			);
 			path = minizip;
@@ -1570,15 +1568,12 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS/ZipArchive.framework",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalytics;
 				PRODUCT_NAME = BMSAnalytics;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Source/Zip/minizip";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Source/Zip";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1602,15 +1597,12 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS/ZipArchive.framework",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalytics;
 				PRODUCT_NAME = BMSAnalytics;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Source/Zip/minizip";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Source/Zip";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
