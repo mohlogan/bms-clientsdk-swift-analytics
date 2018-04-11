@@ -11,13 +11,17 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics.git', :tag => s.version }
   s.source_files = 'Source/**/*.swift'
   s.ios.exclude_files = 'Source/**/*watchOS*.swift'
-  s.watchos.exclude_files = 'Source/**/*iOS*.swift'
+  s.watchos.exclude_files = 'Source/**/*iOS*.swift','Source/Feedback'
 
-  s.dependency 'BMSCore', '~> 2.1'
+  s.default_subspec = 'AnalyticsDep'
 
   s.requires_arc = true
 
   s.ios.deployment_target = '8.0'
   s.watchos.deployment_target = '2.0'
 
+  s.subspec 'AnalyticsDep' do |cs|
+    cs.dependency 'BMSCore', '~> 2.1'
+    cs.dependency 'SSZipArchive'
+  end
 end
