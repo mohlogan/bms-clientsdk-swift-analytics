@@ -23,6 +23,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'AnalyticsDep' do |cs|
     cs.dependency 'BMSCore', '~> 2.1'
-    cs.dependency 'Zip', :git => 'https://github.com/marmelroy/Zip.git', :submodules => true, :branch => 'swift3' 
+    cs.dependency 'Zip', '0.8.0'
   end
 end
