@@ -41,6 +41,8 @@
 		92B9DF6C1DF9FCC800BD3605 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9DF6A1DF9FCC800BD3605 /* LocationDelegate.swift */; };
 		92B9DFB81E00632A00BD3605 /* LocationDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9DFB71E00632A00BD3605 /* LocationDelegateTests.swift */; };
 		963EC4D9C05D038450DD3BEA /* Pods_TestApp_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47A33A1F7D17C3BC0BA13C1 /* Pods_TestApp_watchOS_Extension.framework */; };
+		D09729EE207E585F00407EDF /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09729EB207E585F00407EDF /* Zip.framework */; };
+		D09729F0207E588100407EDF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D09729EF207E588100407EDF /* libz.tbd */; };
 		D41965C0880FFA49D8D23F74 /* Pods_TestApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C932B74BCC35D937C2587F9D /* Pods_TestApp_iOS.framework */; };
 		F3BF6407787EA0042241305B /* Pods_BMSAnalytics_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76F7CEBBF5F2EA948B2C2C1 /* Pods_BMSAnalytics_watchOS.framework */; };
 		F666EEA3DA33B040057AA3EB /* Pods_BMSAnalytics_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7962567D7A452F8C5CD51F5E /* Pods_BMSAnalytics_Tests.framework */; };
@@ -144,6 +146,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 13558E710417FA60A7569B23B18D98DF;
 			remoteInfo = "Pods-TestApp watchOS Extension";
+		};
+		D09729EA207E585F00407EDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9276B4C91C6D1D9E00E61F45 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 89C48A5F4DFD1E5D51118C9FCC36DB8F;
+			remoteInfo = "Zip-iOS";
+		};
+		D09729EC207E585F00407EDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9276B4C91C6D1D9E00E61F45 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CB7B2C66A4A2F24F5932FF4261C25FFC;
+			remoteInfo = "Zip-watchOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -289,6 +305,7 @@
 		A76F7CEBBF5F2EA948B2C2C1 /* Pods_BMSAnalytics_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMSAnalytics_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB27FA8EB17FBAE6EA19D9A /* Pods-BMSAnalytics watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMSAnalytics watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BMSAnalytics watchOS/Pods-BMSAnalytics watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C932B74BCC35D937C2587F9D /* Pods_TestApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09729EF207E588100407EDF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D47A33A1F7D17C3BC0BA13C1 /* Pods_TestApp_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -304,6 +321,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09729F0207E588100407EDF /* libz.tbd in Frameworks */,
+				D09729EE207E585F00407EDF /* Zip.framework in Frameworks */,
 				56DB9C02B9F67782F2C51BA5 /* Pods_BMSAnalytics_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +366,7 @@
 		09097EECC7A66AF6A33558BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D09729EF207E588100407EDF /* libz.tbd */,
 				9276B4B41C6D1D9E00E61F45 /* Pods */,
 				41FAB640CEFBABAE20B12CA1 /* Pods_BMSAnalytics_iOS.framework */,
 				A76F7CEBBF5F2EA948B2C2C1 /* Pods_BMSAnalytics_watchOS.framework */,
@@ -639,6 +659,8 @@
 				92E7AACE1CB700E500FEC069 /* Pods_BMSAnalytics_watchOS.framework */,
 				92E7AAD01CB700E500FEC069 /* Pods_TestApp_iOS.framework */,
 				92E7AAD41CB700E500FEC069 /* Pods_TestApp_watchOS_Extension.framework */,
+				D09729EB207E585F00407EDF /* Zip.framework */,
+				D09729ED207E585F00407EDF /* Zip.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -794,7 +816,6 @@
 				926CF80A1C4ECC330084355B /* Frameworks */,
 				926CF80B1C4ECC330084355B /* Headers */,
 				926CF80C1C4ECC330084355B /* Resources */,
-				03F5C252A0D409021BAD5681 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -814,7 +835,6 @@
 				926CF8151C4ECC330084355B /* Frameworks */,
 				926CF8161C4ECC330084355B /* Resources */,
 				43936358C6CFCD2438D5D60C /* [CP] Embed Pods Frameworks */,
-				798FEBC68CF94A79AE980E9C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -835,7 +855,6 @@
 				926CF8291C4ECD930084355B /* Frameworks */,
 				926CF82A1C4ECD930084355B /* Headers */,
 				926CF82B1C4ECD930084355B /* Resources */,
-				A5A063ED2B27288D7B84A4A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -856,7 +875,6 @@
 				926CF8371C4ECDBD0084355B /* Resources */,
 				926CF86F1C4ECDF80084355B /* Embed Watch Content */,
 				63AB019A66D9C2413788B811 /* [CP] Embed Pods Frameworks */,
-				8EFBD7F3789393FBBECC5E64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -896,7 +914,6 @@
 				926CF8561C4ECDF80084355B /* Frameworks */,
 				926CF8571C4ECDF80084355B /* Resources */,
 				EE6349EA5BE1BC83075D1146 /* [CP] Embed Pods Frameworks */,
-				0BC5376DB92DB22077FC6FBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1033,6 +1050,20 @@
 			remoteRef = 92E7AAD31CB700E500FEC069 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		D09729EB207E585F00407EDF /* Zip.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Zip.framework;
+			remoteRef = D09729EA207E585F00407EDF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D09729ED207E585F00407EDF /* Zip.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Zip.framework;
+			remoteRef = D09729EC207E585F00407EDF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1088,21 +1119,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03F5C252A0D409021BAD5681 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSAnalytics iOS/Pods-BMSAnalytics iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		049B0E80ED09CE292FD0E3FB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1121,21 +1137,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0BC5376DB92DB22077FC6FBA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp watchOS Extension/Pods-TestApp watchOS Extension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		43936358C6CFCD2438D5D60C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1145,11 +1146,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BMSAnalytics Tests/Pods-BMSAnalytics Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI-iOS/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore-iOS/BMSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/Zip-iOS/Zip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1183,45 +1186,17 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestApp iOS/Pods-TestApp iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI-iOS/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore-iOS/BMSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/Zip-iOS/Zip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp iOS/Pods-TestApp iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		798FEBC68CF94A79AE980E9C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSAnalytics Tests/Pods-BMSAnalytics Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8EFBD7F3789393FBBECC5E64 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp iOS/Pods-TestApp iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9A480685350D09605BA9C52A /* [CP] Check Pods Manifest.lock */ = {
@@ -1260,21 +1235,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A5A063ED2B27288D7B84A4A6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMSAnalytics watchOS/Pods-BMSAnalytics watchOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DF0E36AF437F112003BD4AD0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1302,11 +1262,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestApp watchOS Extension/Pods-TestApp watchOS Extension-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI-watchOS/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore-watchOS/BMSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/Zip-watchOS/Zip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

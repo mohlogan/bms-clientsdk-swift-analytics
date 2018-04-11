@@ -15,6 +15,7 @@
 import BMSCore
 import BMSAnalyticsAPI
 import CoreLocation
+import Zip
 
 
 
@@ -376,6 +377,20 @@ public class BMSAnalytics: AnalyticsDelegate {
             return "unknown"
         }
     }
+    
+    internal static func createZip(instanceName: String) -> Void {
+        let imageFile = BMSLogger.logsDocumentPath+instanceName+"/image.png"
+        let jsonFile = BMSLogger.logsDocumentPath+instanceName+"/feedback.json"
+        
+        do {
+            let zipFilePath = try Zip.quickZipFiles([URL(string: imageFile)!, URL(string: jsonFile)!], fileName: instanceName)
+            BMSLogger.internalLogger.info(message: "zipFilePath: " + zipFilePath.absoluteString)
+        }
+        catch {
+            BMSLogger.internalLogger.error(message: "Something went wrong")
+        }
+    }
+    
 }
 
 

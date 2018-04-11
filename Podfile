@@ -3,6 +3,7 @@ use_frameworks!
 
 def shared_pod
 	pod 'BMSCore', '~> 2.2'
+	pod 'Zip', :git => 'https://github.com/marmelroy/Zip.git', :submodules => true, :branch => 'swift3'
 end
 
 

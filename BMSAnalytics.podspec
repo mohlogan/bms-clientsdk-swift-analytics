@@ -13,11 +13,16 @@ Pod::Spec.new do |s|
   s.ios.exclude_files = 'Source/**/*watchOS*.swift'
   s.watchos.exclude_files = 'Source/**/*iOS*.swift'
 
-  s.dependency 'BMSCore', '~> 2.1'
-
+  s.default_subspec = 'AnalyticsDep'
   s.requires_arc = true
 
   s.ios.deployment_target = '8.0'
   s.watchos.deployment_target = '2.0'
 
+  ### Subspecs
+
+  s.subspec 'AnalyticsDep' do |cs|
+    cs.dependency 'BMSCore', '~> 2.1'
+    cs.dependency 'Zip', :git => 'https://github.com/marmelroy/Zip.git', :submodules => true, :branch => 'swift3' 
+  end
 end
