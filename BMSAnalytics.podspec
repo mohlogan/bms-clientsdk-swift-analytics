@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.ios.resource_bundles = {
-  'Feedback' => ['Source/Feedback/*.{storyboard,png}', 'Source/Feedback/Assets.xcassets/*.{json}', 'Source/Feedback/Assets.xcassets/**/*.{png,json}']
+  'Feedback' => ['Source/Feedback/*.{storyboard,xcassets,json,imageset,png}']
   }
 
   s.ios.deployment_target = '8.0'
