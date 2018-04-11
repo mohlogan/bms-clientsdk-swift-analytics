@@ -17,6 +17,10 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
+  s.ios.resource_bundles = {
+  'Feedback' => ['Source/Feedback/*.{storyboard,png}', 'Source/Feedback/Assets*/*']
+  }
+
   s.ios.deployment_target = '8.0'
   s.watchos.deployment_target = '2.0'
 
