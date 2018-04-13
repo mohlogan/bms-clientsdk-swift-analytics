@@ -17,15 +17,12 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.ios.resource_bundles = {
-  'BMSAnalytics' => ['Source/Feedback/*.{storyboard,xcassets,json,imageset,png}']
-  }
+  s.ios.resources = ['Source/Resources/*.{storyboard,xcassets,json,imageset,png}']
 
   s.ios.deployment_target = '8.0'
   s.watchos.deployment_target = '2.0'
 
   s.subspec 'AnalyticsDep' do |cs|
     cs.dependency 'BMSCore', '~> 2.1'
-    cs.dependency 'SSZipArchive'
   end
 end

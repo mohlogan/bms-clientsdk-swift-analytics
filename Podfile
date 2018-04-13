@@ -3,7 +3,6 @@ use_frameworks!
 
 def shared_pod
 	pod 'BMSCore', '~> 2.2'
-	pod 'SSZipArchive'
 end
 
 

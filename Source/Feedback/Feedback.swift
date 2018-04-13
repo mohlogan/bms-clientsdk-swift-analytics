@@ -20,11 +20,23 @@
 import UIKit
 import BMSCore
 
-#if UseCarthage
-    import ZipArchive
-#else
-    import SSZipArchive
-#endif
+class FeedbackService {
+
+    static func getBundle() -> Bundle {
+
+        let podBundle = Bundle(for: UIImageControllerViewController.self)
+
+        guard let bundleUrl = podBundle.url(forResource: "feedback", withExtension: "bundle") else {
+            fatalError()
+        }
+
+        guard let bundle = Bundle(url: bundleUrl) else {
+            fatalError()
+        }
+
+        return bundle
+    }
+}
 
 public class Feedback {
 
@@ -148,8 +160,11 @@ public class Feedback {
             Feedback.screenshot = takeScreenshot(uiViewController.view)
 
             let feedbackBundle = Bundle(for: UIImageControllerViewController.self)
+            //let feedbackBundle = FeedbackService.getBundle()
+            
+            print("bundlePath:"+feedbackBundle.bundlePath)
             let feedbackStoryboard: UIStoryboard!
-            feedbackStoryboard = UIStoryboard(name: "Feedback", bundle: feedbackBundle)
+            feedbackStoryboard = UIStoryboard(name: "fb", bundle: feedbackBundle)
             let feedbackViewController: UIViewController = feedbackStoryboard.instantiateViewController(withIdentifier: "feedbackImageView")
             uiViewController.present(feedbackViewController, animated: true, completion: nil)
         }
@@ -436,6 +451,12 @@ public class Feedback {
         }
     }
 
+    internal static func createZip(instanceName: String) -> Void {
+        let zipPath = BMSLogger.feedbackDocumentPath+instanceName+".zip";
+        let sampleDataPath = BMSLogger.feedbackDocumentPath+instanceName;
+
+    }
+    
     /*internal static func createZip(instanceName: String) -> Void {
         let imageFile = BMSLogger.feedbackDocumentPath+instanceName+"/image.png"
         let jsonFile = BMSLogger.feedbackDocumentPath+instanceName+"/feedback.json"
@@ -449,7 +470,7 @@ public class Feedback {
         }
     }*/
     
-    internal static func createZip(instanceName:String) -> Void {
+    /*internal static func createZip(instanceName:String) -> Void {
         let zipPath = BMSLogger.feedbackDocumentPath+instanceName+".zip";
         let sampleDataPath = BMSLogger.feedbackDocumentPath+instanceName;
         let password = ""
@@ -466,7 +487,7 @@ public class Feedback {
         } else {
             print("No success zip")
         }
-    }
+    }*/
 
     internal static func convertFileToString(filepath: String) -> String? {
         let fileURL = URL(fileURLWithPath: filepath)

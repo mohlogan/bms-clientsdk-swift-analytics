@@ -2,23 +2,19 @@ PODS:
   - BMSAnalyticsAPI (2.2.3)
   - BMSCore (2.3.5):
     - BMSAnalyticsAPI (~> 2.2)
-  - SSZipArchive (2.1.2)
 
 DEPENDENCIES:
   - BMSCore (~> 2.2)
-  - SSZipArchive
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - BMSAnalyticsAPI
     - BMSCore
-    - SSZipArchive
 
 SPEC CHECKSUMS:
   BMSAnalyticsAPI: d259379069bb11d2ff365bf5b796a2677dfc3849
   BMSCore: 446c16a7dbe14b5019751617a00dd947c65cca82
-  SSZipArchive: d4009d2ce5520a421f231fd97028cc0e2667eed8
 
-PODFILE CHECKSUM: 1b4cfe605da86fc7cf0e6fcb53b75d04860dd1fc
+PODFILE CHECKSUM: 1b1440fa2d1ca2118d92cb8ce967103a8a9747ad
 
 COCOAPODS: 1.5.0.beta.1
