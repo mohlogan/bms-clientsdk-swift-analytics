@@ -11,9 +11,11 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics.git', :tag => s.version }
   s.source_files = 'Source/**/*.swift'
   s.ios.exclude_files = 'Source/**/*watchOS*.swift'
-  s.watchos.exclude_files = 'Source/**/*iOS*.swift'
+  s.watchos.exclude_files = 'Source/**/*iOS*.swift','Source/Feedback/*.swift'
+  s.ios.resources = ['Source/Resources/*.{storyboard,xcassets,json,imageset,png}']
 
   s.dependency 'BMSCore', '~> 2.1'
+  s.ios.dependency 'SSZipArchive'
 
   s.requires_arc = true
 

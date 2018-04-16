@@ -8,6 +8,7 @@ end
 
 target 'BMSAnalytics iOS' do
     platform :ios, '9.0'
+        pod 'SSZipArchive'
 	shared_pod
 end
 
@@ -18,11 +19,13 @@ end
 
 target 'BMSAnalytics Tests' do
     platform :ios, '9.0'
+	pod 'SSZipArchive'
 	shared_pod
 end
 
 target 'TestApp iOS' do
     platform :ios, '9.0'
+	pod 'SSZipArchive'
 	shared_pod
 end
 
