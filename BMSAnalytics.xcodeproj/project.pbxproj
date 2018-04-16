@@ -41,7 +41,6 @@
 		92B9DF6C1DF9FCC800BD3605 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9DF6A1DF9FCC800BD3605 /* LocationDelegate.swift */; };
 		92B9DFB81E00632A00BD3605 /* LocationDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9DFB71E00632A00BD3605 /* LocationDelegateTests.swift */; };
 		963EC4D9C05D038450DD3BEA /* Pods_TestApp_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47A33A1F7D17C3BC0BA13C1 /* Pods_TestApp_watchOS_Extension.framework */; };
-		D04FB70B20848DA3007E949E /* SSZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04FB70A20848DA3007E949E /* SSZipArchive.framework */; };
 		D04FB70D20848E11007E949E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D04FB70C20848E11007E949E /* libz.tbd */; };
 		D04FB71220848E40007E949E /* UIImageControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04FB70F20848E40007E949E /* UIImageControllerViewController.swift */; };
 		D04FB71320848E40007E949E /* ComposeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04FB71020848E40007E949E /* ComposeEditorViewController.swift */; };
@@ -325,7 +324,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D04FB70D20848E11007E949E /* libz.tbd in Frameworks */,
-				D04FB70B20848DA3007E949E /* SSZipArchive.framework in Frameworks */,
 				56DB9C02B9F67782F2C51BA5 /* Pods_BMSAnalytics_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
