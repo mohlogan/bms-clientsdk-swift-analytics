@@ -19,7 +19,11 @@
 
 import UIKit
 import BMSCore
-import SSZipArchive
+#if UseCarthage
+    import ZipArchive
+#else
+    import SSZipArchive
+#endif
 
 public class Feedback {
 
