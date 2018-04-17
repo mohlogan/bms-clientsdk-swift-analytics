@@ -7,40 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00CFCD179AF2E47623DE262DA7E357CC /* ioapi_mem.h in Headers */ = {isa = PBXBuildFile; fileRef = 817501BCA07DC7385F16430A7EA2F927 /* ioapi_mem.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		06CDDCC0DBB4BE4ED1922AB81494395D /* AppIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3148CFE49A0DDCC86EF9BE7D441132FB /* AppIdentity.swift */; };
 		06E928146DBA6E793F300FBB5CB3E8CB /* BaseAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DD5D514B546E0F1EBA0404D8F89FC /* BaseAuthorizationManager.swift */; };
 		0C0C890585011225E9E7CDD49323882A /* BMSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 39FA94B7F2CB81DE3E4C3ABE33A549E3 /* BMSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1014B5DBE1E1E71D4EBD22FAC004333D /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 8CCBA7A9FB284AF2947940F5ACCFF5B8 /* hmac.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0FAB4B3D78B628C959ED4135856FAAF5 /* pwd2key.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E3ECC003AC2EF4ECFD417E1466A7245 /* pwd2key.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1014B5DBE1E1E71D4EBD22FAC004333D /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = DBC3C27E84AFDD2E9B0D809757309E77 /* hmac.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		1270BCE93255F91CA2B7E1C02AC3948E /* BMSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA820C6AAB463CB329243CDEE6010D6 /* BMSClient.swift */; };
 		16F9A3E28EFA5F4FFB1F01CC197F32D2 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0E4A44456BBB4802BFD6440FA6217 /* Response.swift */; };
 		198DE2A3347E4496F90E77DDD54527E6 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276131FE4EF0C4068F85733C3A588114 /* Analytics.swift */; };
+		1A1565F8D30EBFC19B675033F44009E4 /* brg_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2D4B977CD5044F901AE337F49FC56F /* brg_endian.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1C20A5DED3046D55856F5AFB394E2D1F /* AppIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3148CFE49A0DDCC86EF9BE7D441132FB /* AppIdentity.swift */; };
 		1CDCEFBAF3A8EB74BEFFA3C712FB1943 /* DeviceIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CBD83D7D9430FF9F75DAC434FFA7B6 /* DeviceIdentity.swift */; };
 		1D44FFEAD5295FEFBE88A3440012FA18 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BE85C5E275B9A313BD841001AA7D0F /* NetworkMonitor.swift */; };
-		1EA78DC28AC7E6988083DAB7024E4455 /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B0EF8ADF1D5F536C275023FD7EB24BA /* hmac.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		21CB0FB2BC8C3BEE6BD4D3BF43B56302 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F6CC8AB672F014FE665888D09A151 /* Request.swift */; };
+		2221CA84117C86CD34A383C8BAFD2590 /* SSZipArchive-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 201BCB1FAB67529C161E454AA99603F3 /* SSZipArchive-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24A581C783A9848DB6CF9C6D2128F169 /* BaseDeviceIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B6584354A700AF5B6196FAFC62D4D3 /* BaseDeviceIdentity.swift */; };
 		292C8B2A3B05B913AD0969215523B518 /* BMSCore-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D7008EF592AF603776CD41A3682C6C /* BMSCore-iOS-dummy.m */; };
-		293600028142673A8C48FE7482BF9749 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = BC49AE8FEA56F01A7C4EBAAED1854412 /* SSZipArchive.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		2BAD9F7E34A27FFE76DB15A1979F382E /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 13942870939004E5441528F24FFCBF20 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2F2BE5BCB9B5CA69A1974133F9096F24 /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = F2DDDBBF8A7FA68B032D163D15EA62AF /* ioapi_buf.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		293600028142673A8C48FE7482BF9749 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 5340F3B3D030BCB8744EEA9B7E95507E /* SSZipArchive.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2A070E459C2C3A167A01DD09195ABBBC /* aestab.h in Headers */ = {isa = PBXBuildFile; fileRef = 730425913DFDEAD3112221590B48A684 /* aestab.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2F2BE5BCB9B5CA69A1974133F9096F24 /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 4462C9798E073820FB0D31F78506542A /* ioapi_buf.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		31E5A0AA7B4FDB30607AB58FB08E4E5F /* Pods-TestApp iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E6DF4AE46F91FA456BB4972934AC0 /* Pods-TestApp iOS-dummy.m */; };
 		32AE558300AE436654472A0360CBB7F0 /* BMSURLSessionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0CC069352AB2F8B46AB2512F48955 /* BMSURLSessionUtility.swift */; };
-		337AC6C45EB2C6416153188C0673D8E5 /* pwd2key.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ECB45732E327731821C90743A0C20DB /* pwd2key.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		33A1B3AA5EA114A56CB2D6A439C6B58C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989E6EB912D2F72CA31974DC23283AB /* Logger.swift */; };
 		36363CBCEE4AC5EFB6B586C063F797D6 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AC584C1A48559D2CB22DDEFCCCFC98 /* BaseRequest.swift */; };
 		3A068A76AA24E3B946EAA053A53599AD /* Pods-BMSAnalytics Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 229BD500A6994F83CB4D0A50A2E6512F /* Pods-BMSAnalytics Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A6C1A619F6F9A489ED2EC9A0AD7803F /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BBF8C27C55B616CEF3A0159E109C747 /* sha1.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3ABCCB5455BD1D95703370E4E0896ED4 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BFBCE65F85C940357BD2F3B1953A937 /* sha1.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3ABCCB5455BD1D95703370E4E0896ED4 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B47CAC078E6892CA9894E1336021909 /* sha1.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		3FF048B957CEC640E3D9DF84D0B134A6 /* Pods-BMSAnalytics iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54F2316EAD7EA70CB70359D6A70ED54A /* Pods-BMSAnalytics iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4140DC81E61A54768B727752C9310D20 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 504A3C8460D310BACD294C5C9D48D099 /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		421C0943723C52435DD7B37F621E34E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE31A7DDF1DBD842801300089EE9E3BC /* Foundation.framework */; };
 		436CB227EB189FF981049D59D26F09D5 /* BMSURLSessionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0CC069352AB2F8B46AB2512F48955 /* BMSURLSessionUtility.swift */; };
 		43AF81046B622192D3D79308F135381D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329B2BB6FD59C58C39BB1636E677A420 /* Foundation.framework */; };
-		43C97DE2903B168EDF50C558D908F226 /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = A94E002992E99804C227F2BF87DDD84F /* minishared.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		43C97DE2903B168EDF50C558D908F226 /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A011CC523F2E92655F1A667130C264 /* minishared.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		45C12D950A11A27F56F14BE5448D3210 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C51899F62CF4B2AFD490C7572DB68F /* Error.swift */; };
 		45F641A61C1489B2B71C25BA16D2B5E4 /* BMSAnalyticsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8071DFE2EA64CAB06512FF8A6A7806 /* BMSAnalyticsAPI.framework */; };
-		47B2B42414864D5E404C28D417F2F4B6 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B932747611ED08558F0E11337543D31 /* pwd2key.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		47B2B42414864D5E404C28D417F2F4B6 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 952501B31A159956500CC9A9018D0A35 /* pwd2key.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		47D89BBFCE6640E9AD769985B0AE3FA7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F6CC8AB672F014FE665888D09A151 /* Request.swift */; };
 		49059D03C3B5974DDC961583A115792D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE31A7DDF1DBD842801300089EE9E3BC /* Foundation.framework */; };
 		4982393660FED7282E5CA6A644B1A46A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0E4A44456BBB4802BFD6440FA6217 /* Response.swift */; };
@@ -48,75 +48,75 @@
 		4E9127A52A5DB7398CDFD8746A96EA72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329B2BB6FD59C58C39BB1636E677A420 /* Foundation.framework */; };
 		51519FC0845693F79098DF846FA5892B /* BaseAppIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECB0E2E55969B0DCEF4E32C9A1E948 /* BaseAppIdentity.swift */; };
 		518D7A507EBB72327A8E501B657C4663 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA435704BD12FA58AE90E3DB9ECA7415 /* AuthorizationManager.swift */; };
-		527FA711C4F09DD775B855CDFC196F39 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 84594D05531F36E87920307692AABD59 /* aes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		528FBC2B1997201D7EECD5A790C9D448 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 229FC7A993AA97672C49D5C1B0DCB6CD /* aes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		53946D0AED8A25DAC37BD1F1A3119263 /* BMSAnalyticsAPI-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 814204E849B13D41A3303F74C7795DFD /* BMSAnalyticsAPI-iOS-dummy.m */; };
-		5767129A3CB665204364B795AF1DCF05 /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A324FA2A32AB4ECFAA10A1989C9B0389 /* SSZipCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		59F10AB7453AD512F88A72AE17DB2913 /* aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = 064C193E899D9F6995B366AE14E08370 /* aes_ni.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5B65C55B235BD666FC6482953DDF266D /* ioapi_mem.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E08FC596D906D991B73DE5141DB3E7 /* ioapi_mem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		548825F13DB84114D8B6015EF78FA4C8 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D0FBDEF29A288BFE1598517CB65A76 /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5860CA953FE4FE7136329E0448F88C7D /* brg_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 72BF435DA3069A8D408F69D5399F7375 /* brg_types.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		59F10AB7453AD512F88A72AE17DB2913 /* aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = 17961EA6DD2BD0F84920D836259F3CD1 /* aes_ni.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		5DE5CB16090CF32C77CBE178C54533CE /* BaseAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DD5D514B546E0F1EBA0404D8F89FC /* BaseAuthorizationManager.swift */; };
 		5E1FFABDDF67E8A28A2F046BCA41AE85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329B2BB6FD59C58C39BB1636E677A420 /* Foundation.framework */; };
-		5F536DCD6DFEFFD271A94F5DE0184DEA /* aes_ni.h in Headers */ = {isa = PBXBuildFile; fileRef = 35D08C3B01082307D61D7798E3569B88 /* aes_ni.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		60452FF3ABDD5558E38BAF75E328E64C /* prng.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A5B2F1B9BD898C6A68CD8E5C88B91C0 /* prng.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		66DDEA35E151C591EF0BA1398DB4604D /* brg_types.h in Headers */ = {isa = PBXBuildFile; fileRef = EE3BA920275C87539B1FD26FCFBA3C9E /* brg_types.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6071597873C2FACB21A90027E7BF2828 /* SSZipArchiveImp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F3F09798691E7CF0280D6B0053125CA /* SSZipArchiveImp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		655E0FE17A0838D54B20656E4D1EDEFF /* aes_ni.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D62FDCD4F868B2ACAE519B58DB136C /* aes_ni.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		694C8E6BEA8DA01A20C5685C02A00F25 /* BMSAnalyticsAPI-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFF1BB40EDF359DBA920C5F94825009D /* BMSAnalyticsAPI-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		699BC98985F486E2BF1BA351D6E6A3C5 /* BMSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 39FA94B7F2CB81DE3E4C3ABE33A549E3 /* BMSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6C11E340D28AA68FA56ADEAAFC78DD54 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 4346A04BAB14AC40D816ABD50F2C5BFC /* module.modulemap */; };
+		6F286C965980C6C885FC1E9E63196D0F /* minishared.h in Headers */ = {isa = PBXBuildFile; fileRef = 7295A11F9A6D7128186A5F80F0FEB29C /* minishared.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		70A52AC14A86A572AA622337D9C3DC30 /* BMSURLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60809CB28682E72599BD9CE4AB8576D /* BMSURLSessionDelegate.swift */; };
 		711BC00B679E2FD77EF80CF4CB2294BA /* Pods-BMSAnalytics watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D334227E795AD444D067FE9CE46C1940 /* Pods-BMSAnalytics watchOS-dummy.m */; };
 		7303DD7BC6084B25EF07C035FC72CCD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE31A7DDF1DBD842801300089EE9E3BC /* Foundation.framework */; };
 		763C7FF4F419D31742561130D354254A /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA435704BD12FA58AE90E3DB9ECA7415 /* AuthorizationManager.swift */; };
-		76C865864AD497EDD60492E807B5596A /* SSZipArchive-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 735C18337B6BA688F4A0087DDCB2A291 /* SSZipArchive-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		770A7F237883A2005B2C353FAC195C40 /* Pods-TestApp iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0A97DBA6C688EE98FDA8DAD4790865 /* Pods-TestApp iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BCDEB2CBB7BB6498F8930C3882FD151 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE31A7DDF1DBD842801300089EE9E3BC /* Foundation.framework */; };
 		7BFDFA9F9583C5A8D1EAAEC38265E401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329B2BB6FD59C58C39BB1636E677A420 /* Foundation.framework */; };
-		7C5926CBE5740A1679CC2627EAFF4742 /* aesopt.h in Headers */ = {isa = PBXBuildFile; fileRef = C8AE5D1DA4EB9E1EE304F6EB56B2D93B /* aesopt.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7EA476CD5E7BABDF5ABA1452264651B6 /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = E3443C34649971206589C18D848B9EE5 /* crypt.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		80069E0BAE2AADB776032A959B346952 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B86DCE17BD783D6A08A3E64C50840B /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		81534FF495C6548C096940E4E6F84D93 /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE56B1C7567ED6F5698253CF0F2C21 /* SSZipArchive-dummy.m */; };
+		7EA476CD5E7BABDF5ABA1452264651B6 /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 844CF93F06E16B9A595FEB35932FB9D7 /* crypt.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		810A8EBBFECE189D0E188188270A9725 /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 40F43DAB39F206795E2319B8773953EC /* sha1.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		81534FF495C6548C096940E4E6F84D93 /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB812E62D00F3F0D26E2ED90CD5369 /* SSZipArchive-dummy.m */; };
 		81AC665151DEB17F51FD69F65FE4F54D /* RequestMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC150D0AF5802A65C3A93ABE37987C /* RequestMetadata.swift */; };
-		83A7F6B7445F61B1D9259DF88B33A57C /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F53420471A79DB936822D68A83DB13 /* aeskey.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		82B1885AED41F298E0EE729C73801802 /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = BEE7D101427C4B87837E661A8B2B0DDF /* SSZipCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A7F6B7445F61B1D9259DF88B33A57C /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 834FD37E3E289DF45B4D2D19A899232E /* aeskey.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		84D88E6E32DDABF0B945BF5D34582A15 /* UserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C25F1A14DC1D700BEB4BBC144FD37E /* UserIdentity.swift */; };
 		85A1C1DA9A33BD152CA7A30CF987F163 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AC584C1A48559D2CB22DDEFCCCFC98 /* BaseRequest.swift */; };
-		86CE97F9D06ABD2AB2588EC3B26C448A /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = A8362653559B66DD3E012478370BA541 /* ZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		87346CFABD79C66F9727515ABE71CD18 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = F4224AB4FCDC7B1D807F47EDC71A94C1 /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8779A1F83168D86E5B6F63BC4CEB854B /* ioapi_buf.h in Headers */ = {isa = PBXBuildFile; fileRef = 97CD4D628173F231DF51F7FAF1F92F3B /* ioapi_buf.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8946E46A97692A85D3F81B8BA6C34207 /* fileenc.h in Headers */ = {isa = PBXBuildFile; fileRef = C14D1E329C599DE2EEBDA9924F2B8A64 /* fileenc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8817EA06D9813F1F52F5FBEFE91EB199 /* aesopt.h in Headers */ = {isa = PBXBuildFile; fileRef = A126D4AF0DEF54460B97BFCDEE19C062 /* aesopt.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8A13BABB99EA6E9F4903E52819561D8E /* BaseDeviceIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B6584354A700AF5B6196FAFC62D4D3 /* BaseDeviceIdentity.swift */; };
 		8E0FE755D72D67D23C0694F55476473B /* BaseAppIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ECB0E2E55969B0DCEF4E32C9A1E948 /* BaseAppIdentity.swift */; };
 		8E73ED75FBD74E5506E1DE6325BFAE07 /* BMSURLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60809CB28682E72599BD9CE4AB8576D /* BMSURLSessionDelegate.swift */; };
 		8EC0518C18BDFE178EA5D4BE6E309B51 /* Pods-BMSAnalytics Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 392C58BB1613949B075C58EA727B6C22 /* Pods-BMSAnalytics Tests-dummy.m */; };
 		8F4A94E76C97BAD715D3897D81EF9E88 /* Pods-TestApp watchOS Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D0DB6E6175593206E490FE6EC1BB2E /* Pods-TestApp watchOS Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		919FDCCF918A8A01348325EAD352AFBB /* BMSAnalyticsAPI-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FCBD54E177B0709225DD6DC97E349B6 /* BMSAnalyticsAPI-watchOS-dummy.m */; };
+		91EB533AC2E4272D6878B8B36C4566D7 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 7903A8F36C4A4216BCB5B316CCEFE327 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		927DA7082C3A8F387E7B9B5D871EDBB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE31A7DDF1DBD842801300089EE9E3BC /* Foundation.framework */; };
-		936F6B33FA8164E6FCD8FE98C36F3057 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 34D3ADCCAA934188A654E09853DD9F4F /* aescrypt.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		936F6B33FA8164E6FCD8FE98C36F3057 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = A5A078257FB2FE1BFE4495F573C838DB /* aescrypt.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		94D0CFBAB5F92FFAA35DF9EC4970EB36 /* Pods-BMSAnalytics iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C2400EE745D5C9BFE4728364042D9 /* Pods-BMSAnalytics iOS-dummy.m */; };
-		94E578C34EE1C38C2310A2A8B24CFAB7 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E49147D36D533C68178D7EC594F1DB9 /* fileenc.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9DCDAB5927057FE9894D06062D608B08 /* brg_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D5AB2D3E12C8EC0C55CF683BB6F4E3 /* brg_endian.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		94E578C34EE1C38C2310A2A8B24CFAB7 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 07D51851C88172D392967ECAF8DDF463 /* fileenc.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A0BA89C14056C17C117FEEE04B6329EC /* Pods-BMSAnalytics watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82B8610966B8E58AD8C001A9DB32E469 /* Pods-BMSAnalytics watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3726755523782844F33E3589D683586 /* minishared.h in Headers */ = {isa = PBXBuildFile; fileRef = 134EA3C6F9475D21C038447BA3B302E7 /* minishared.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A520CBE6F862965B48919D81F56358F8 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = DE598B7830150AD559998A98023E5CF8 /* zip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A88C38F9CB85F92596229CCB5AB58B0A /* aestab.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABBCDFED4B1DE7EFA4D40C845EA6B88 /* aestab.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A520CBE6F862965B48919D81F56358F8 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 26EA0740EAAC3F9511CC9DAD2843ECAE /* zip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		AC3C86A8900282C5563876B3A02671AF /* BMSCore-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF23D7DE140C2F25952CCEC9E1E8AE7 /* BMSCore-watchOS-dummy.m */; };
 		ADB62FB10D4700D04473F27385D5C96D /* BaseUserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967155A96ED2C5D264A56BD3B8E81724 /* BaseUserIdentity.swift */; };
 		B0A2686A81E771F98B51C872E7045311 /* BMSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA820C6AAB463CB329243CDEE6010D6 /* BMSClient.swift */; };
 		B4342EE1DAE59A869D56A8FC99DF6457 /* BMSAnalyticsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8071DFE2EA64CAB06512FF8A6A7806 /* BMSAnalyticsAPI.framework */; };
+		B5019619B79F27A3F9B1FD18F38D00F5 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CDD2D5AFD9DACE3027631AEE71E2B9D /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B536C74484FE6AF6E7E5B00531A432FD /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FFBAF3F498388F8206446D0A0DF88C1 /* hmac.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C4F795F0658F38D25F70F63BB647FCBB /* DeviceIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CBD83D7D9430FF9F75DAC434FFA7B6 /* DeviceIdentity.swift */; };
+		C9A2652277C07265E78FAC895697B8BA /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = FF79A8BFAA7E38ECE5A9236F31EDBA50 /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CA836C2082AA7EC22A5FA7C1B004E05F /* BMSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA1E35AAEB69063E714A2EE4020C51 /* BMSURLSession.swift */; };
+		CEDFBBBA4097D47A42640662919A1C8E /* ioapi_buf.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A9465B5B36F44CA205573693D35948B /* ioapi_buf.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CF3331F55AB2AE611BC3116BAA7849D4 /* BaseUserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967155A96ED2C5D264A56BD3B8E81724 /* BaseUserIdentity.swift */; };
-		DF21DB68AA2242D3154C2AF08D3C24BF /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E2A4FB906D4E4ECBE821B4F0AD1BB0 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D736FBC8140F3578E4821BB371FA9F2B /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E8B04A87B93E599F2D2C635941D3FAA /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DFD9CC87FF1844405652EC9C7EC626DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE31A7DDF1DBD842801300089EE9E3BC /* Foundation.framework */; };
 		E0CF708B685FB23BC8995DCC1EE3F8E3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C51899F62CF4B2AFD490C7572DB68F /* Error.swift */; };
 		E0F2BADFDD39B29797C83208B8E64028 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 4346A04BAB14AC40D816ABD50F2C5BFC /* module.modulemap */; };
 		E10C2CADCF572BE1070CD0F22FE051F7 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276131FE4EF0C4068F85733C3A588114 /* Analytics.swift */; };
 		E70FBBB350CDE495578AAFD9402D886B /* BMSAnalyticsAPI-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB21CCBC80DE81CB4FB6EFA444B1C00 /* BMSAnalyticsAPI-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC2B2480B281021C82283E87466E3B30 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989E6EB912D2F72CA31974DC23283AB /* Logger.swift */; };
-		ED1361AA0A1F925D3814FFAAA8174404 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = FBF04651223896FFC983F2463F01218E /* aestab.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		ED676E0D5F0953BDDB3250BB492C3D18 /* ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 1412A5E5356C0A16BF0D0286BB4EB7C4 /* ioapi_mem.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ED1361AA0A1F925D3814FFAAA8174404 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 1945DE0C6940D68858A23D73E8B06506 /* aestab.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ED676E0D5F0953BDDB3250BB492C3D18 /* ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = D48912867E3538D7ACC4AA7AB5C478F8 /* ioapi_mem.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		EFB391DC383FA856D460A84BEAB2D037 /* Pods-TestApp watchOS Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8AA15369F360AE2B71E0B24D6218E6 /* Pods-TestApp watchOS Extension-dummy.m */; };
-		F6E211F7B54C71D3410C1446B99749EB /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F9C24AB183F69F33C7C275F9FEDAE /* ioapi.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FB912947E1EF4C691A1C31D28E8CE27C /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A18817036B3F30DF063F3D2D9190C1D /* prng.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F6E211F7B54C71D3410C1446B99749EB /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = D0225DC0E5741DB397F78BB2BDFB454C /* ioapi.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F76F5A4E7A3EE21610E4AF2F39CA9823 /* prng.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE603220A1D11956C46D519B6BBDC4C /* prng.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F9861A572EEB21CFF0C7F80D8382CBC1 /* fileenc.h in Headers */ = {isa = PBXBuildFile; fileRef = 59A667758B6C300C14CC973C51D36071 /* fileenc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FB912947E1EF4C691A1C31D28E8CE27C /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = AD0252B0B12E52D83DDE6EF33C4A0D39 /* prng.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		FCA1EDFDA35B4BF5CF63763F5F12FC93 /* UserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C25F1A14DC1D700BEB4BBC144FD37E /* UserIdentity.swift */; };
-		FF4996AC60E188B03331AA40BC10CE9B /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = B6576790A9458049E49B67E4B56A89CD /* unzip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FF4996AC60E188B03331AA40BC10CE9B /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 132443CF77682EB18315CCF9264EC77C /* unzip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		FF914DDE9743AB8595D4FF3A82B388A8 /* BMSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA1E35AAEB69063E714A2EE4020C51 /* BMSURLSession.swift */; };
 /* End PBXBuildFile section */
 
@@ -230,136 +230,138 @@
 
 /* Begin PBXFileReference section */
 		005914999E0FA668A776519D026995E7 /* Pods-TestApp watchOS Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestApp watchOS Extension.modulemap"; sourceTree = "<group>"; };
-		04B86DCE17BD783D6A08A3E64C50840B /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = SSZipArchive/minizip/ioapi.h; sourceTree = "<group>"; };
-		05A7BAA97BFBDDCCE57C5CA2F72FE48A /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSZipArchive.modulemap; sourceTree = "<group>"; };
-		064C193E899D9F6995B366AE14E08370 /* aes_ni.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aes_ni.c; path = SSZipArchive/minizip/aes/aes_ni.c; sourceTree = "<group>"; };
 		076E205E79B0268CC9C18F1CCAE5DB03 /* Pods-TestApp iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestApp iOS.release.xcconfig"; sourceTree = "<group>"; };
+		07D51851C88172D392967ECAF8DDF463 /* fileenc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fileenc.c; path = SSZipArchive/minizip/aes/fileenc.c; sourceTree = "<group>"; };
 		0C8C2400EE745D5C9BFE4728364042D9 /* Pods-BMSAnalytics iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BMSAnalytics iOS-dummy.m"; sourceTree = "<group>"; };
 		103C00AE67589DAA4C738F9EE937BD4B /* BMSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BMSCore.framework; path = "BMSCore-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		134EA3C6F9475D21C038447BA3B302E7 /* minishared.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = minishared.h; path = SSZipArchive/minizip/minishared.h; sourceTree = "<group>"; };
-		13942870939004E5441528F24FFCBF20 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = SSZipArchive/minizip/unzip.h; sourceTree = "<group>"; };
+		132443CF77682EB18315CCF9264EC77C /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
 		13B5DD40D7BBD5F56B08B850C43F5E4D /* Pods-BMSAnalytics watchOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BMSAnalytics watchOS-resources.sh"; sourceTree = "<group>"; };
 		13D7008EF592AF603776CD41A3682C6C /* BMSCore-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BMSCore-iOS-dummy.m"; sourceTree = "<group>"; };
 		13ECB0E2E55969B0DCEF4E32C9A1E948 /* BaseAppIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseAppIdentity.swift; path = Source/Security/Identity/BaseAppIdentity.swift; sourceTree = "<group>"; };
-		1412A5E5356C0A16BF0D0286BB4EB7C4 /* ioapi_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi_mem.c; path = SSZipArchive/minizip/ioapi_mem.c; sourceTree = "<group>"; };
-		14E2A4FB906D4E4ECBE821B4F0AD1BB0 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = SSZipArchive/minizip/crypt.h; sourceTree = "<group>"; };
+		14EB812E62D00F3F0D26E2ED90CD5369 /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
+		15A011CC523F2E92655F1A667130C264 /* minishared.c */ = {isa = PBXFileReference; includeInIndex = 1; name = minishared.c; path = SSZipArchive/minizip/minishared.c; sourceTree = "<group>"; };
+		17961EA6DD2BD0F84920D836259F3CD1 /* aes_ni.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aes_ni.c; path = SSZipArchive/minizip/aes/aes_ni.c; sourceTree = "<group>"; };
+		1945DE0C6940D68858A23D73E8B06506 /* aestab.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aestab.c; path = SSZipArchive/minizip/aes/aestab.c; sourceTree = "<group>"; };
 		1D55A59B82A5BD2C8C5D5A0E0D15A219 /* Pods-BMSAnalytics iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BMSAnalytics iOS.release.xcconfig"; sourceTree = "<group>"; };
+		1E3ECC003AC2EF4ECFD417E1466A7245 /* pwd2key.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pwd2key.h; path = SSZipArchive/minizip/aes/pwd2key.h; sourceTree = "<group>"; };
 		1E98D88E8BF493767CFB4C47600C4C52 /* BMSAnalyticsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BMSAnalyticsAPI.framework; path = "BMSAnalyticsAPI-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		201BCB1FAB67529C161E454AA99603F3 /* SSZipArchive-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-umbrella.h"; sourceTree = "<group>"; };
 		229BD500A6994F83CB4D0A50A2E6512F /* Pods-BMSAnalytics Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BMSAnalytics Tests-umbrella.h"; sourceTree = "<group>"; };
+		229FC7A993AA97672C49D5C1B0DCB6CD /* aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes.h; path = SSZipArchive/minizip/aes/aes.h; sourceTree = "<group>"; };
 		256536F9AD52E16C192EC5EDD5C5D954 /* Pods-BMSAnalytics watchOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BMSAnalytics watchOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		26EA0740EAAC3F9511CC9DAD2843ECAE /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
 		276131FE4EF0C4068F85733C3A588114 /* Analytics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Analytics.swift; path = Source/Analytics.swift; sourceTree = "<group>"; };
 		28BE30D2FDB6D7EDFD66482DB5771D4B /* BMSAnalyticsAPI-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "BMSAnalyticsAPI-watchOS.xcconfig"; path = "../BMSAnalyticsAPI-watchOS/BMSAnalyticsAPI-watchOS.xcconfig"; sourceTree = "<group>"; };
 		299A8FD5B4160ADA696D3BBB4B98C870 /* Pods-BMSAnalytics Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BMSAnalytics Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		29DC7169273B343CDF8E81B85D2E89D1 /* Pods-TestApp iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestApp iOS.modulemap"; sourceTree = "<group>"; };
-		2B932747611ED08558F0E11337543D31 /* pwd2key.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pwd2key.c; path = SSZipArchive/minizip/aes/pwd2key.c; sourceTree = "<group>"; };
-		2CDB8C89BF2D7F56447D16ADC28717DE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3148CFE49A0DDCC86EF9BE7D441132FB /* AppIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppIdentity.swift; path = Source/Security/Identity/AppIdentity.swift; sourceTree = "<group>"; };
 		329B2BB6FD59C58C39BB1636E677A420 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		329ED6257FF4388721645C6BBB2E4C8A /* BMSAnalyticsAPI-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BMSAnalyticsAPI-watchOS-prefix.pch"; path = "../BMSAnalyticsAPI-watchOS/BMSAnalyticsAPI-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		32C576C253F009E410A7EB8B72B8E70E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../BMSAnalyticsAPI-watchOS/Info.plist"; sourceTree = "<group>"; };
-		32F53420471A79DB936822D68A83DB13 /* aeskey.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aeskey.c; path = SSZipArchive/minizip/aes/aeskey.c; sourceTree = "<group>"; };
 		33CBD83D7D9430FF9F75DAC434FFA7B6 /* DeviceIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceIdentity.swift; path = Source/Security/Identity/DeviceIdentity.swift; sourceTree = "<group>"; };
 		34A39F2A2F0C7B6333B60FFB4E4AAC18 /* Pods-BMSAnalytics iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BMSAnalytics iOS-resources.sh"; sourceTree = "<group>"; };
-		34D3ADCCAA934188A654E09853DD9F4F /* aescrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aescrypt.c; path = SSZipArchive/minizip/aes/aescrypt.c; sourceTree = "<group>"; };
-		35D08C3B01082307D61D7798E3569B88 /* aes_ni.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes_ni.h; path = SSZipArchive/minizip/aes/aes_ni.h; sourceTree = "<group>"; };
 		392C58BB1613949B075C58EA727B6C22 /* Pods-BMSAnalytics Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BMSAnalytics Tests-dummy.m"; sourceTree = "<group>"; };
 		399CF8CCC06D11C60D4CA315BB142784 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39BE85C5E275B9A313BD841001AA7D0F /* NetworkMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkMonitor.swift; path = "Source/Network Requests/NetworkMonitor.swift"; sourceTree = "<group>"; };
 		39FA94B7F2CB81DE3E4C3ABE33A549E3 /* BMSCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMSCore.h; path = Source/Resources/BMSCore.h; sourceTree = "<group>"; };
-		3ABBCDFED4B1DE7EFA4D40C845EA6B88 /* aestab.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aestab.h; path = SSZipArchive/minizip/aes/aestab.h; sourceTree = "<group>"; };
+		3DE603220A1D11956C46D519B6BBDC4C /* prng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = prng.h; path = SSZipArchive/minizip/aes/prng.h; sourceTree = "<group>"; };
+		40F43DAB39F206795E2319B8773953EC /* sha1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = SSZipArchive/minizip/aes/sha1.h; sourceTree = "<group>"; };
 		4140F4E8C7CB0ECF759F8746E6520897 /* Pods-BMSAnalytics watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BMSAnalytics watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		4346A04BAB14AC40D816ABD50F2C5BFC /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = module.modulemap; path = Source/Resources/module.modulemap; sourceTree = "<group>"; };
+		4462C9798E073820FB0D31F78506542A /* ioapi_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi_buf.c; path = SSZipArchive/minizip/ioapi_buf.c; sourceTree = "<group>"; };
 		4989E6EB912D2F72CA31974DC23283AB /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Source/Logger.swift; sourceTree = "<group>"; };
-		4A18817036B3F30DF063F3D2D9190C1D /* prng.c */ = {isa = PBXFileReference; includeInIndex = 1; name = prng.c; path = SSZipArchive/minizip/aes/prng.c; sourceTree = "<group>"; };
-		504A3C8460D310BACD294C5C9D48D099 /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = SSZipArchive/minizip/zip.h; sourceTree = "<group>"; };
+		4E2D4B977CD5044F901AE337F49FC56F /* brg_endian.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_endian.h; path = SSZipArchive/minizip/aes/brg_endian.h; sourceTree = "<group>"; };
+		5340F3B3D030BCB8744EEA9B7E95507E /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
 		53C51899F62CF4B2AFD490C7572DB68F /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
 		54F2316EAD7EA70CB70359D6A70ED54A /* Pods-BMSAnalytics iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BMSAnalytics iOS-umbrella.h"; sourceTree = "<group>"; };
 		56EFC040659478A0A2B7C09094304B12 /* Pods-BMSAnalytics Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BMSAnalytics Tests-resources.sh"; sourceTree = "<group>"; };
 		587DB54B98FB36E5B49E491E03944E5B /* Pods_TestApp_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestApp_watchOS_Extension.framework; path = "Pods-TestApp watchOS Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		599B763A4C009D7BC1813DF6924916AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59A667758B6C300C14CC973C51D36071 /* fileenc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fileenc.h; path = SSZipArchive/minizip/aes/fileenc.h; sourceTree = "<group>"; };
 		5A0A97DBA6C688EE98FDA8DAD4790865 /* Pods-TestApp iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestApp iOS-umbrella.h"; sourceTree = "<group>"; };
 		5E3D4C121267ECE52125B66A7C0E600A /* BMSCore-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "BMSCore-watchOS.modulemap"; path = "../BMSCore-watchOS/BMSCore-watchOS.modulemap"; sourceTree = "<group>"; };
-		5E49147D36D533C68178D7EC594F1DB9 /* fileenc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fileenc.c; path = SSZipArchive/minizip/aes/fileenc.c; sourceTree = "<group>"; };
+		5E8B04A87B93E599F2D2C635941D3FAA /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = SSZipArchive/minizip/crypt.h; sourceTree = "<group>"; };
+		5FFBAF3F498388F8206446D0A0DF88C1 /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = SSZipArchive/minizip/aes/hmac.h; sourceTree = "<group>"; };
 		6144508C9A41C9BE16A78FE9E465B3B7 /* Pods-BMSAnalytics Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BMSAnalytics Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6A9465B5B36F44CA205573693D35948B /* ioapi_buf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi_buf.h; path = SSZipArchive/minizip/ioapi_buf.h; sourceTree = "<group>"; };
 		6AB55C6A1B7B36E3D9A737EF5CA75BA0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BFBCE65F85C940357BD2F3B1953A937 /* sha1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sha1.c; path = SSZipArchive/minizip/aes/sha1.c; sourceTree = "<group>"; };
+		6B47CAC078E6892CA9894E1336021909 /* sha1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sha1.c; path = SSZipArchive/minizip/aes/sha1.c; sourceTree = "<group>"; };
+		6CE116AB6133856FCA6A894589E88BC4 /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSZipArchive.modulemap; sourceTree = "<group>"; };
 		6E8071DFE2EA64CAB06512FF8A6A7806 /* BMSAnalyticsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMSAnalyticsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FFF3191BA5FAD422392A6791D82A2A /* Pods-BMSAnalytics Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BMSAnalytics Tests.modulemap"; sourceTree = "<group>"; };
-		735C18337B6BA688F4A0087DDCB2A291 /* SSZipArchive-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-umbrella.h"; sourceTree = "<group>"; };
+		7295A11F9A6D7128186A5F80F0FEB29C /* minishared.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = minishared.h; path = SSZipArchive/minizip/minishared.h; sourceTree = "<group>"; };
+		72BF435DA3069A8D408F69D5399F7375 /* brg_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_types.h; path = SSZipArchive/minizip/aes/brg_types.h; sourceTree = "<group>"; };
+		730425913DFDEAD3112221590B48A684 /* aestab.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aestab.h; path = SSZipArchive/minizip/aes/aestab.h; sourceTree = "<group>"; };
 		7427300C1A878F823998EBA11C882086 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A5B2F1B9BD898C6A68CD8E5C88B91C0 /* prng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = prng.h; path = SSZipArchive/minizip/aes/prng.h; sourceTree = "<group>"; };
-		7B0EF8ADF1D5F536C275023FD7EB24BA /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = SSZipArchive/minizip/aes/hmac.h; sourceTree = "<group>"; };
-		7BFE56B1C7567ED6F5698253CF0F2C21 /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
+		7903A8F36C4A4216BCB5B316CCEFE327 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = SSZipArchive/minizip/unzip.h; sourceTree = "<group>"; };
 		7C19146FD6B4CAC69D8E6FD83041CE80 /* Pods-TestApp iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestApp iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7CCB6A039B41EE2845573F2820927211 /* SSZipArchive.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.xcconfig; sourceTree = "<group>"; };
 		7F8AA15369F360AE2B71E0B24D6218E6 /* Pods-TestApp watchOS Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestApp watchOS Extension-dummy.m"; sourceTree = "<group>"; };
 		7FC3B4606A4589B05C0A628325D18F64 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FCBD54E177B0709225DD6DC97E349B6 /* BMSAnalyticsAPI-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BMSAnalyticsAPI-watchOS-dummy.m"; path = "../BMSAnalyticsAPI-watchOS/BMSAnalyticsAPI-watchOS-dummy.m"; sourceTree = "<group>"; };
 		814204E849B13D41A3303F74C7795DFD /* BMSAnalyticsAPI-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BMSAnalyticsAPI-iOS-dummy.m"; sourceTree = "<group>"; };
+		8150E9D2832386B25CB84EC70717CE0F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		817501BCA07DC7385F16430A7EA2F927 /* ioapi_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi_mem.h; path = SSZipArchive/minizip/ioapi_mem.h; sourceTree = "<group>"; };
 		82B8610966B8E58AD8C001A9DB32E469 /* Pods-BMSAnalytics watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BMSAnalytics watchOS-umbrella.h"; sourceTree = "<group>"; };
-		84594D05531F36E87920307692AABD59 /* aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes.h; path = SSZipArchive/minizip/aes/aes.h; sourceTree = "<group>"; };
+		834FD37E3E289DF45B4D2D19A899232E /* aeskey.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aeskey.c; path = SSZipArchive/minizip/aes/aeskey.c; sourceTree = "<group>"; };
+		844CF93F06E16B9A595FEB35932FB9D7 /* crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = crypt.c; path = SSZipArchive/minizip/crypt.c; sourceTree = "<group>"; };
 		84C25F1A14DC1D700BEB4BBC144FD37E /* UserIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserIdentity.swift; path = Source/Security/Identity/UserIdentity.swift; sourceTree = "<group>"; };
 		8B02CF195EFA3A920A1FCB7749ABE548 /* Pods-BMSAnalytics iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BMSAnalytics iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8B234B91275F8EE14EBAB06C966769A6 /* Pods-TestApp watchOS Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestApp watchOS Extension-resources.sh"; sourceTree = "<group>"; };
 		8C0BD3822AD50B579ADF322EDE89FCD9 /* Pods-TestApp watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestApp watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		8C7F9C24AB183F69F33C7C275F9FEDAE /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
 		8C897A3E27C1E8C17B8D9A316E777D10 /* Pods-BMSAnalytics iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BMSAnalytics iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		8CCBA7A9FB284AF2947940F5ACCFF5B8 /* hmac.c */ = {isa = PBXFileReference; includeInIndex = 1; name = hmac.c; path = SSZipArchive/minizip/aes/hmac.c; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93D62FDCD4F868B2ACAE519B58DB136C /* aes_ni.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes_ni.h; path = SSZipArchive/minizip/aes/aes_ni.h; sourceTree = "<group>"; };
+		952501B31A159956500CC9A9018D0A35 /* pwd2key.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pwd2key.c; path = SSZipArchive/minizip/aes/pwd2key.c; sourceTree = "<group>"; };
 		967155A96ED2C5D264A56BD3B8E81724 /* BaseUserIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseUserIdentity.swift; path = Source/Security/Identity/BaseUserIdentity.swift; sourceTree = "<group>"; };
 		972BD39F5C0F094A36F0FA2A81BEFD94 /* BMSCore-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "BMSCore-iOS.modulemap"; sourceTree = "<group>"; };
-		97CD4D628173F231DF51F7FAF1F92F3B /* ioapi_buf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi_buf.h; path = SSZipArchive/minizip/ioapi_buf.h; sourceTree = "<group>"; };
 		986AEB7EDD0B8D6B831C0F37A88A6757 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../BMSCore-watchOS/Info.plist"; sourceTree = "<group>"; };
 		9B18F730E5C11D6CACE240667B01380A /* Pods-BMSAnalytics watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BMSAnalytics watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		9B1DD5D514B546E0F1EBA0404D8F89FC /* BaseAuthorizationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseAuthorizationManager.swift; path = Source/Security/BaseAuthorizationManager.swift; sourceTree = "<group>"; };
 		9B2AECF53A356CDE0D4F5B376834F327 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSZipArchive.framework; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2E6DF4AE46F91FA456BB4972934AC0 /* Pods-TestApp iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestApp iOS-dummy.m"; sourceTree = "<group>"; };
-		9BBF8C27C55B616CEF3A0159E109C747 /* sha1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = SSZipArchive/minizip/aes/sha1.h; sourceTree = "<group>"; };
 		9C619DF50F0BD041691726D9CF5DC321 /* BMSAnalyticsAPI-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "BMSAnalyticsAPI-iOS.xcconfig"; sourceTree = "<group>"; };
-		9ECB45732E327731821C90743A0C20DB /* pwd2key.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pwd2key.h; path = SSZipArchive/minizip/aes/pwd2key.h; sourceTree = "<group>"; };
+		9CDD2D5AFD9DACE3027631AEE71E2B9D /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
 		9EF23D7DE140C2F25952CCEC9E1E8AE7 /* BMSCore-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BMSCore-watchOS-dummy.m"; path = "../BMSCore-watchOS/BMSCore-watchOS-dummy.m"; sourceTree = "<group>"; };
+		9F3F09798691E7CF0280D6B0053125CA /* SSZipArchiveImp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchiveImp.h; path = SSZipArchive/SSZipArchiveImp.h; sourceTree = "<group>"; };
 		9FFA1E35AAEB69063E714A2EE4020C51 /* BMSURLSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSURLSession.swift; path = "Source/Network Requests/BMSURLSession.swift"; sourceTree = "<group>"; };
+		A126D4AF0DEF54460B97BFCDEE19C062 /* aesopt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aesopt.h; path = SSZipArchive/minizip/aes/aesopt.h; sourceTree = "<group>"; };
 		A1341438331B3872EB788EBD5571B9D5 /* Pods_BMSAnalytics_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BMSAnalytics_iOS.framework; path = "Pods-BMSAnalytics iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A324FA2A32AB4ECFAA10A1989C9B0389 /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
 		A32EB3F5F5E976074857C7734F5E6E27 /* Pods-TestApp iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestApp iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		A35980B8CAAEF4EEED99C95B3FC91961 /* BMSCore-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "BMSCore-watchOS.xcconfig"; path = "../BMSCore-watchOS/BMSCore-watchOS.xcconfig"; sourceTree = "<group>"; };
 		A3CD4724B192876E2E9BB7CD1ACADFC9 /* Pods-TestApp watchOS Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestApp watchOS Extension-acknowledgements.plist"; sourceTree = "<group>"; };
-		A7D5AB2D3E12C8EC0C55CF683BB6F4E3 /* brg_endian.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_endian.h; path = SSZipArchive/minizip/aes/brg_endian.h; sourceTree = "<group>"; };
-		A7E08FC596D906D991B73DE5141DB3E7 /* ioapi_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi_mem.h; path = SSZipArchive/minizip/ioapi_mem.h; sourceTree = "<group>"; };
-		A8362653559B66DD3E012478370BA541 /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/ZipArchive.h; sourceTree = "<group>"; };
-		A94E002992E99804C227F2BF87DDD84F /* minishared.c */ = {isa = PBXFileReference; includeInIndex = 1; name = minishared.c; path = SSZipArchive/minizip/minishared.c; sourceTree = "<group>"; };
+		A5A078257FB2FE1BFE4495F573C838DB /* aescrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aescrypt.c; path = SSZipArchive/minizip/aes/aescrypt.c; sourceTree = "<group>"; };
+		A6D0FBDEF29A288BFE1598517CB65A76 /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = SSZipArchive/minizip/ioapi.h; sourceTree = "<group>"; };
 		AA0A75DEC416C33EF983B2AF585C9A3C /* Pods-BMSAnalytics iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BMSAnalytics iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AA8AE916B89B2AB8372C920D813DF9BB /* Pods-BMSAnalytics Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BMSAnalytics Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD0252B0B12E52D83DDE6EF33C4A0D39 /* prng.c */ = {isa = PBXFileReference; includeInIndex = 1; name = prng.c; path = SSZipArchive/minizip/aes/prng.c; sourceTree = "<group>"; };
 		AD0F6CC8AB672F014FE665888D09A151 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = "Source/Network Requests/Request.swift"; sourceTree = "<group>"; };
 		B45CC148C059AC73D6E7E7939D6BE132 /* Pods-TestApp iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestApp iOS-resources.sh"; sourceTree = "<group>"; };
 		B5B0CC069352AB2F8B46AB2512F48955 /* BMSURLSessionUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSURLSessionUtility.swift; path = "Source/Network Requests/BMSURLSessionUtility.swift"; sourceTree = "<group>"; };
-		B6576790A9458049E49B67E4B56A89CD /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
 		B81F9F060E389CB29D7129FE408B791D /* Pods-BMSAnalytics Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BMSAnalytics Tests.release.xcconfig"; sourceTree = "<group>"; };
-		BC49AE8FEA56F01A7C4EBAAED1854412 /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
 		BDB3C98B6375E2D70EFE07CF8FC0803F /* Pods_BMSAnalytics_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BMSAnalytics_watchOS.framework; path = "Pods-BMSAnalytics watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2ED0C3C999F9BBA0A420CA5008517F /* Pods-BMSAnalytics iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BMSAnalytics iOS.modulemap"; sourceTree = "<group>"; };
+		BEE7D101427C4B87837E661A8B2B0DDF /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
 		BFF1BB40EDF359DBA920C5F94825009D /* BMSAnalyticsAPI-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BMSAnalyticsAPI-iOS-umbrella.h"; sourceTree = "<group>"; };
-		C14D1E329C599DE2EEBDA9924F2B8A64 /* fileenc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fileenc.h; path = SSZipArchive/minizip/aes/fileenc.h; sourceTree = "<group>"; };
 		C53258F8CEC0D55C8B69B7D579A6C5BA /* Pods-TestApp iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestApp iOS-frameworks.sh"; sourceTree = "<group>"; };
 		C53ED87C97CEFA6026B3F28F3C3F9917 /* Pods_BMSAnalytics_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BMSAnalytics_Tests.framework; path = "Pods-BMSAnalytics Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8AE5D1DA4EB9E1EE304F6EB56B2D93B /* aesopt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aesopt.h; path = SSZipArchive/minizip/aes/aesopt.h; sourceTree = "<group>"; };
 		CAC911993A2D2AFCE83F17ECD3DCCC18 /* BMSAnalyticsAPI-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "BMSAnalyticsAPI-watchOS.modulemap"; path = "../BMSAnalyticsAPI-watchOS/BMSAnalyticsAPI-watchOS.modulemap"; sourceTree = "<group>"; };
 		CC8A04DE92C7277E40064AA2088C6CAE /* BMSAnalyticsAPI-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "BMSAnalyticsAPI-iOS.modulemap"; sourceTree = "<group>"; };
 		CD98DE8AE7C4985ED52A230CF8A5972E /* Pods-TestApp watchOS Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestApp watchOS Extension-frameworks.sh"; sourceTree = "<group>"; };
+		D0225DC0E5741DB397F78BB2BDFB454C /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
 		D1024EA1939DC3AF0105457A021B5BEF /* BMSAnalyticsAPI-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BMSAnalyticsAPI-iOS-prefix.pch"; sourceTree = "<group>"; };
 		D15BC58365CE20C9A0560164B90D1742 /* Pods-TestApp iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestApp iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D2AC584C1A48559D2CB22DDEFCCCFC98 /* BaseRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseRequest.swift; path = "Source/Network Requests/BaseRequest.swift"; sourceTree = "<group>"; };
 		D334227E795AD444D067FE9CE46C1940 /* Pods-BMSAnalytics watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BMSAnalytics watchOS-dummy.m"; sourceTree = "<group>"; };
 		D34B831408D24B11CE1E6CEA8E4E8D7F /* Pods-BMSAnalytics watchOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BMSAnalytics watchOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		D3A8C800E9F0FACBC5A222EB05105A64 /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
+		D48912867E3538D7ACC4AA7AB5C478F8 /* ioapi_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi_mem.c; path = SSZipArchive/minizip/ioapi_mem.c; sourceTree = "<group>"; };
+		D8A1B2EFFF0F275C2DDAAB44141B8A2F /* SSZipArchive.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.xcconfig; sourceTree = "<group>"; };
 		D9D0DB6E6175593206E490FE6EC1BB2E /* Pods-TestApp watchOS Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestApp watchOS Extension-umbrella.h"; sourceTree = "<group>"; };
 		DA675161A0A4A98C3D8A1F069A0A3EA8 /* BMSCore-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BMSCore-watchOS-prefix.pch"; path = "../BMSCore-watchOS/BMSCore-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		DBC3C27E84AFDD2E9B0D809757309E77 /* hmac.c */ = {isa = PBXFileReference; includeInIndex = 1; name = hmac.c; path = SSZipArchive/minizip/aes/hmac.c; sourceTree = "<group>"; };
 		DE31A7DDF1DBD842801300089EE9E3BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DE5461E6BAE146141395D547F4B7EDD1 /* BMSAnalyticsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BMSAnalyticsAPI.framework; path = "BMSAnalyticsAPI-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE598B7830150AD559998A98023E5CF8 /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
 		DFAF47917DCE137F591DF5B6143A644B /* BMSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BMSCore.framework; path = "BMSCore-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A77C378124EB16070606BF7BE18751 /* Pods-TestApp watchOS Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestApp watchOS Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E3443C34649971206589C18D848B9EE5 /* crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = crypt.c; path = SSZipArchive/minizip/crypt.c; sourceTree = "<group>"; };
 		E47E40465413131EEDBE7DA40098C54E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E60809CB28682E72599BD9CE4AB8576D /* BMSURLSessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSURLSessionDelegate.swift; path = "Source/Network Requests/BMSURLSessionDelegate.swift"; sourceTree = "<group>"; };
 		E6AD1EB25DC32130E6C7F12AE04B68A3 /* Pods-BMSAnalytics Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BMSAnalytics Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -368,17 +370,15 @@
 		EBA820C6AAB463CB329243CDEE6010D6 /* BMSClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSClient.swift; path = Source/BMSClient.swift; sourceTree = "<group>"; };
 		ECB21CCBC80DE81CB4FB6EFA444B1C00 /* BMSAnalyticsAPI-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BMSAnalyticsAPI-watchOS-umbrella.h"; path = "../BMSAnalyticsAPI-watchOS/BMSAnalyticsAPI-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		ED99D67D214C5BF0FF327A64B6916FB2 /* Pods_TestApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestApp_iOS.framework; path = "Pods-TestApp iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE3BA920275C87539B1FD26FCFBA3C9E /* brg_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_types.h; path = SSZipArchive/minizip/aes/brg_types.h; sourceTree = "<group>"; };
-		F2DDDBBF8A7FA68B032D163D15EA62AF /* ioapi_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi_buf.c; path = SSZipArchive/minizip/ioapi_buf.c; sourceTree = "<group>"; };
 		F30A189E5685F8DB8678DA9E578E4F94 /* Pods-TestApp watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestApp watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
-		F4224AB4FCDC7B1D807F47EDC71A94C1 /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
+		F462AD4E327054E1E6A8713A73191207 /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
 		F498FA74A93AF248B8953566B664785F /* BMSCore-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BMSCore-iOS-prefix.pch"; sourceTree = "<group>"; };
 		F5437E20F6D43694E9F02A6BCC89FD4C /* Pods-BMSAnalytics watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BMSAnalytics watchOS.modulemap"; sourceTree = "<group>"; };
 		F5B6584354A700AF5B6196FAFC62D4D3 /* BaseDeviceIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseDeviceIdentity.swift; path = Source/Security/Identity/BaseDeviceIdentity.swift; sourceTree = "<group>"; };
 		F7F0E4A44456BBB4802BFD6440FA6217 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = "Source/Network Requests/Response.swift"; sourceTree = "<group>"; };
 		FBAC150D0AF5802A65C3A93ABE37987C /* RequestMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestMetadata.swift; path = Source/RequestMetadata.swift; sourceTree = "<group>"; };
-		FBF04651223896FFC983F2463F01218E /* aestab.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aestab.c; path = SSZipArchive/minizip/aes/aestab.c; sourceTree = "<group>"; };
 		FE4D3F6665F5207AD203CBA0ED99431E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF79A8BFAA7E38ECE5A9236F31EDBA50 /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = SSZipArchive/minizip/zip.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -545,70 +545,9 @@
 			children = (
 				67EBB73062AF4973E30D8C7C4A569950 /* BMSAnalyticsAPI */,
 				948D93F9B03864A80A9D6134BFBD301E /* BMSCore */,
-				3DAEC87E6922D79AA379BEA84C80D0FC /* SSZipArchive */,
+				915F36464E7E3B54D221DE2C126E0CCE /* SSZipArchive */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		3DAEC87E6922D79AA379BEA84C80D0FC /* SSZipArchive */ = {
-			isa = PBXGroup;
-			children = (
-				84594D05531F36E87920307692AABD59 /* aes.h */,
-				064C193E899D9F6995B366AE14E08370 /* aes_ni.c */,
-				35D08C3B01082307D61D7798E3569B88 /* aes_ni.h */,
-				34D3ADCCAA934188A654E09853DD9F4F /* aescrypt.c */,
-				32F53420471A79DB936822D68A83DB13 /* aeskey.c */,
-				C8AE5D1DA4EB9E1EE304F6EB56B2D93B /* aesopt.h */,
-				FBF04651223896FFC983F2463F01218E /* aestab.c */,
-				3ABBCDFED4B1DE7EFA4D40C845EA6B88 /* aestab.h */,
-				A7D5AB2D3E12C8EC0C55CF683BB6F4E3 /* brg_endian.h */,
-				EE3BA920275C87539B1FD26FCFBA3C9E /* brg_types.h */,
-				E3443C34649971206589C18D848B9EE5 /* crypt.c */,
-				14E2A4FB906D4E4ECBE821B4F0AD1BB0 /* crypt.h */,
-				5E49147D36D533C68178D7EC594F1DB9 /* fileenc.c */,
-				C14D1E329C599DE2EEBDA9924F2B8A64 /* fileenc.h */,
-				8CCBA7A9FB284AF2947940F5ACCFF5B8 /* hmac.c */,
-				7B0EF8ADF1D5F536C275023FD7EB24BA /* hmac.h */,
-				8C7F9C24AB183F69F33C7C275F9FEDAE /* ioapi.c */,
-				04B86DCE17BD783D6A08A3E64C50840B /* ioapi.h */,
-				F2DDDBBF8A7FA68B032D163D15EA62AF /* ioapi_buf.c */,
-				97CD4D628173F231DF51F7FAF1F92F3B /* ioapi_buf.h */,
-				1412A5E5356C0A16BF0D0286BB4EB7C4 /* ioapi_mem.c */,
-				A7E08FC596D906D991B73DE5141DB3E7 /* ioapi_mem.h */,
-				A94E002992E99804C227F2BF87DDD84F /* minishared.c */,
-				134EA3C6F9475D21C038447BA3B302E7 /* minishared.h */,
-				4A18817036B3F30DF063F3D2D9190C1D /* prng.c */,
-				7A5B2F1B9BD898C6A68CD8E5C88B91C0 /* prng.h */,
-				2B932747611ED08558F0E11337543D31 /* pwd2key.c */,
-				9ECB45732E327731821C90743A0C20DB /* pwd2key.h */,
-				6BFBCE65F85C940357BD2F3B1953A937 /* sha1.c */,
-				9BBF8C27C55B616CEF3A0159E109C747 /* sha1.h */,
-				F4224AB4FCDC7B1D807F47EDC71A94C1 /* SSZipArchive.h */,
-				BC49AE8FEA56F01A7C4EBAAED1854412 /* SSZipArchive.m */,
-				A324FA2A32AB4ECFAA10A1989C9B0389 /* SSZipCommon.h */,
-				B6576790A9458049E49B67E4B56A89CD /* unzip.c */,
-				13942870939004E5441528F24FFCBF20 /* unzip.h */,
-				DE598B7830150AD559998A98023E5CF8 /* zip.c */,
-				504A3C8460D310BACD294C5C9D48D099 /* zip.h */,
-				A8362653559B66DD3E012478370BA541 /* ZipArchive.h */,
-				5097B0DE97C96881894301A481F8A6B6 /* Support Files */,
-			);
-			name = SSZipArchive;
-			path = SSZipArchive;
-			sourceTree = "<group>";
-		};
-		5097B0DE97C96881894301A481F8A6B6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2CDB8C89BF2D7F56447D16ADC28717DE /* Info.plist */,
-				05A7BAA97BFBDDCCE57C5CA2F72FE48A /* SSZipArchive.modulemap */,
-				7CCB6A039B41EE2845573F2820927211 /* SSZipArchive.xcconfig */,
-				7BFE56B1C7567ED6F5698253CF0F2C21 /* SSZipArchive-dummy.m */,
-				D3A8C800E9F0FACBC5A222EB05105A64 /* SSZipArchive-prefix.pch */,
-				735C18337B6BA688F4A0087DDCB2A291 /* SSZipArchive-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SSZipArchive";
 			sourceTree = "<group>";
 		};
 		67EBB73062AF4973E30D8C7C4A569950 /* BMSAnalyticsAPI */ = {
@@ -658,6 +597,20 @@
 			path = "../Target Support Files/BMSCore-iOS";
 			sourceTree = "<group>";
 		};
+		6FC0319A79486A6034770BC377252F50 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8150E9D2832386B25CB84EC70717CE0F /* Info.plist */,
+				6CE116AB6133856FCA6A894589E88BC4 /* SSZipArchive.modulemap */,
+				D8A1B2EFFF0F275C2DDAAB44141B8A2F /* SSZipArchive.xcconfig */,
+				14EB812E62D00F3F0D26E2ED90CD5369 /* SSZipArchive-dummy.m */,
+				F462AD4E327054E1E6A8713A73191207 /* SSZipArchive-prefix.pch */,
+				201BCB1FAB67529C161E454AA99603F3 /* SSZipArchive-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SSZipArchive";
+			sourceTree = "<group>";
+		};
 		7689D9D6B23B03F50B4D41DFCCBFDF28 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -694,6 +647,53 @@
 				E71D4F1B209E31EAE76C08BC82AE4929 /* watchOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		915F36464E7E3B54D221DE2C126E0CCE /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				229FC7A993AA97672C49D5C1B0DCB6CD /* aes.h */,
+				17961EA6DD2BD0F84920D836259F3CD1 /* aes_ni.c */,
+				93D62FDCD4F868B2ACAE519B58DB136C /* aes_ni.h */,
+				A5A078257FB2FE1BFE4495F573C838DB /* aescrypt.c */,
+				834FD37E3E289DF45B4D2D19A899232E /* aeskey.c */,
+				A126D4AF0DEF54460B97BFCDEE19C062 /* aesopt.h */,
+				1945DE0C6940D68858A23D73E8B06506 /* aestab.c */,
+				730425913DFDEAD3112221590B48A684 /* aestab.h */,
+				4E2D4B977CD5044F901AE337F49FC56F /* brg_endian.h */,
+				72BF435DA3069A8D408F69D5399F7375 /* brg_types.h */,
+				844CF93F06E16B9A595FEB35932FB9D7 /* crypt.c */,
+				5E8B04A87B93E599F2D2C635941D3FAA /* crypt.h */,
+				07D51851C88172D392967ECAF8DDF463 /* fileenc.c */,
+				59A667758B6C300C14CC973C51D36071 /* fileenc.h */,
+				DBC3C27E84AFDD2E9B0D809757309E77 /* hmac.c */,
+				5FFBAF3F498388F8206446D0A0DF88C1 /* hmac.h */,
+				D0225DC0E5741DB397F78BB2BDFB454C /* ioapi.c */,
+				A6D0FBDEF29A288BFE1598517CB65A76 /* ioapi.h */,
+				4462C9798E073820FB0D31F78506542A /* ioapi_buf.c */,
+				6A9465B5B36F44CA205573693D35948B /* ioapi_buf.h */,
+				D48912867E3538D7ACC4AA7AB5C478F8 /* ioapi_mem.c */,
+				817501BCA07DC7385F16430A7EA2F927 /* ioapi_mem.h */,
+				15A011CC523F2E92655F1A667130C264 /* minishared.c */,
+				7295A11F9A6D7128186A5F80F0FEB29C /* minishared.h */,
+				AD0252B0B12E52D83DDE6EF33C4A0D39 /* prng.c */,
+				3DE603220A1D11956C46D519B6BBDC4C /* prng.h */,
+				952501B31A159956500CC9A9018D0A35 /* pwd2key.c */,
+				1E3ECC003AC2EF4ECFD417E1466A7245 /* pwd2key.h */,
+				6B47CAC078E6892CA9894E1336021909 /* sha1.c */,
+				40F43DAB39F206795E2319B8773953EC /* sha1.h */,
+				9CDD2D5AFD9DACE3027631AEE71E2B9D /* SSZipArchive.h */,
+				5340F3B3D030BCB8744EEA9B7E95507E /* SSZipArchive.m */,
+				9F3F09798691E7CF0280D6B0053125CA /* SSZipArchiveImp.h */,
+				BEE7D101427C4B87837E661A8B2B0DDF /* SSZipCommon.h */,
+				132443CF77682EB18315CCF9264EC77C /* unzip.c */,
+				7903A8F36C4A4216BCB5B316CCEFE327 /* unzip.h */,
+				26EA0740EAAC3F9511CC9DAD2843ECAE /* zip.c */,
+				FF79A8BFAA7E38ECE5A9236F31EDBA50 /* zip.h */,
+				6FC0319A79486A6034770BC377252F50 /* Support Files */,
+			);
+			name = SSZipArchive;
+			path = SSZipArchive;
 			sourceTree = "<group>";
 		};
 		948D93F9B03864A80A9D6134BFBD301E /* BMSCore */ = {
@@ -797,6 +797,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4314AC07F0E833396B69F083D8510B26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528FBC2B1997201D7EECD5A790C9D448 /* aes.h in Headers */,
+				655E0FE17A0838D54B20656E4D1EDEFF /* aes_ni.h in Headers */,
+				8817EA06D9813F1F52F5FBEFE91EB199 /* aesopt.h in Headers */,
+				2A070E459C2C3A167A01DD09195ABBBC /* aestab.h in Headers */,
+				1A1565F8D30EBFC19B675033F44009E4 /* brg_endian.h in Headers */,
+				5860CA953FE4FE7136329E0448F88C7D /* brg_types.h in Headers */,
+				D736FBC8140F3578E4821BB371FA9F2B /* crypt.h in Headers */,
+				F9861A572EEB21CFF0C7F80D8382CBC1 /* fileenc.h in Headers */,
+				B536C74484FE6AF6E7E5B00531A432FD /* hmac.h in Headers */,
+				548825F13DB84114D8B6015EF78FA4C8 /* ioapi.h in Headers */,
+				CEDFBBBA4097D47A42640662919A1C8E /* ioapi_buf.h in Headers */,
+				00CFCD179AF2E47623DE262DA7E357CC /* ioapi_mem.h in Headers */,
+				6F286C965980C6C885FC1E9E63196D0F /* minishared.h in Headers */,
+				F76F5A4E7A3EE21610E4AF2F39CA9823 /* prng.h in Headers */,
+				0FAB4B3D78B628C959ED4135856FAAF5 /* pwd2key.h in Headers */,
+				810A8EBBFECE189D0E188188270A9725 /* sha1.h in Headers */,
+				2221CA84117C86CD34A383C8BAFD2590 /* SSZipArchive-umbrella.h in Headers */,
+				B5019619B79F27A3F9B1FD18F38D00F5 /* SSZipArchive.h in Headers */,
+				6071597873C2FACB21A90027E7BF2828 /* SSZipArchiveImp.h in Headers */,
+				82B1885AED41F298E0EE729C73801802 /* SSZipCommon.h in Headers */,
+				91EB533AC2E4272D6878B8B36C4566D7 /* unzip.h in Headers */,
+				C9A2652277C07265E78FAC895697B8BA /* zip.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5006F682B8E12D2BC20FC2877F544355 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -834,35 +863,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				699BC98985F486E2BF1BA351D6E6A3C5 /* BMSCore.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AADA276DEEA1D9AAB370C079434772B4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				527FA711C4F09DD775B855CDFC196F39 /* aes.h in Headers */,
-				5F536DCD6DFEFFD271A94F5DE0184DEA /* aes_ni.h in Headers */,
-				7C5926CBE5740A1679CC2627EAFF4742 /* aesopt.h in Headers */,
-				A88C38F9CB85F92596229CCB5AB58B0A /* aestab.h in Headers */,
-				9DCDAB5927057FE9894D06062D608B08 /* brg_endian.h in Headers */,
-				66DDEA35E151C591EF0BA1398DB4604D /* brg_types.h in Headers */,
-				DF21DB68AA2242D3154C2AF08D3C24BF /* crypt.h in Headers */,
-				8946E46A97692A85D3F81B8BA6C34207 /* fileenc.h in Headers */,
-				1EA78DC28AC7E6988083DAB7024E4455 /* hmac.h in Headers */,
-				80069E0BAE2AADB776032A959B346952 /* ioapi.h in Headers */,
-				8779A1F83168D86E5B6F63BC4CEB854B /* ioapi_buf.h in Headers */,
-				5B65C55B235BD666FC6482953DDF266D /* ioapi_mem.h in Headers */,
-				A3726755523782844F33E3589D683586 /* minishared.h in Headers */,
-				60452FF3ABDD5558E38BAF75E328E64C /* prng.h in Headers */,
-				337AC6C45EB2C6416153188C0673D8E5 /* pwd2key.h in Headers */,
-				3A6C1A619F6F9A489ED2EC9A0AD7803F /* sha1.h in Headers */,
-				76C865864AD497EDD60492E807B5596A /* SSZipArchive-umbrella.h in Headers */,
-				87346CFABD79C66F9727515ABE71CD18 /* SSZipArchive.h in Headers */,
-				5767129A3CB665204364B795AF1DCF05 /* SSZipCommon.h in Headers */,
-				2BAD9F7E34A27FFE76DB15A1979F382E /* unzip.h in Headers */,
-				4140DC81E61A54768B727752C9310D20 /* zip.h in Headers */,
-				86CE97F9D06ABD2AB2588EC3B26C448A /* ZipArchive.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1032,7 +1032,7 @@
 			buildPhases = (
 				C67792647A0D7502D0A6A564A6FD2484 /* Sources */,
 				F8A96BE8B5AF00DCBCC4476DEF758B98 /* Frameworks */,
-				AADA276DEEA1D9AAB370C079434772B4 /* Headers */,
+				4314AC07F0E833396B69F083D8510B26 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -1401,7 +1401,7 @@
 		};
 		27A1DA6EDC7854A6EF97292E002660BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CCB6A039B41EE2845573F2820927211 /* SSZipArchive.xcconfig */;
+			baseConfigurationReference = D8A1B2EFFF0F275C2DDAAB44141B8A2F /* SSZipArchive.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2039,7 +2039,7 @@
 		};
 		F1D944344D2BD6C133FAED1A46289564 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CCB6A039B41EE2845573F2820927211 /* SSZipArchive.xcconfig */;
+			baseConfigurationReference = D8A1B2EFFF0F275C2DDAAB44141B8A2F /* SSZipArchive.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

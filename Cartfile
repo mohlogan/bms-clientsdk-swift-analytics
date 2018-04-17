@@ -1,2 +1,2 @@
 github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core" ~> 2.0
-github "ZipArchive/ZipArchive"
+github "mohlogan/SSZipArchive" "master"

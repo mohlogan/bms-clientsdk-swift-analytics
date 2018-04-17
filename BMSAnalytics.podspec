@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.ios.resources = ['Source/Resources/*.{storyboard,xcassets,json,imageset,png}']
 
   s.dependency 'BMSCore', '~> 2.1'
-  s.ios.dependency 'SSZipArchive'
+  s.ios.dependency 'SSZipArchive' :git => 'https://github.com/mohlogan/SSZipArchive.git', :branch => 'master'
 
   s.requires_arc = true
 

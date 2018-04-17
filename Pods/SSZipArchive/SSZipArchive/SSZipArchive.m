@@ -6,7 +6,7 @@
 //  Copyright (c) Sam Soffes 2010-2015. All rights reserved.
 //
 
-#import "SSZipArchive.h"
+#import "SSZipArchiveImp.h"
 #include "unzip.h"
 #include "zip.h"
 #include "minishared.h"

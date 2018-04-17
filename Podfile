@@ -8,7 +8,7 @@ end
 
 target 'BMSAnalytics iOS' do
     platform :ios, '9.0'
-        pod 'SSZipArchive'
+        pod 'SSZipArchive', :git => 'https://github.com/mohlogan/SSZipArchive.git', :branch => 'master'
 	shared_pod
 end
 
@@ -19,13 +19,13 @@ end
 
 target 'BMSAnalytics Tests' do
     platform :ios, '9.0'
-	pod 'SSZipArchive'
+	pod 'SSZipArchive', :git => 'https://github.com/mohlogan/SSZipArchive.git', :branch => 'master'
 	shared_pod
 end
 
 target 'TestApp iOS' do
     platform :ios, '9.0'
-	pod 'SSZipArchive'
+	pod 'SSZipArchive', :git => 'https://github.com/mohlogan/SSZipArchive.git', :branch => 'master'
 	shared_pod
 end
 
